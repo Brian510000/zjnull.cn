@@ -19,6 +19,8 @@ $ hexo clean && hexo generate && hexo deploy
 
 测试保存源码是否会覆盖main或上传main
 
+现在vscode提交到分支source上，不影响main分支的代理
+
 ## **运维状况报告**
 
 **日期：** 2025年2月8日\
