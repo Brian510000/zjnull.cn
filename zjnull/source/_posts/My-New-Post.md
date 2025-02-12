@@ -17,6 +17,8 @@ $ hexo clean && hexo generate && hexo deploy
 
 测试中，git是否正确提交分支
 
+测试保存源码是否会覆盖main或上传main
+
 ## **运维状况报告**
 
 **日期：** 2025年2月8日\
