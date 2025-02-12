@@ -3,11 +3,16 @@ title: "Hexo 运维状况"
 date: 2025-02-12 20:00:00
 tags: ["Hexo", "博客"]
 categories: ["技术"]
-top_img: /img/7.jpg
+top_img: /img/2.jpg
 cover: /img/5.jpg
 toc: true
 comments: true
 ---
+测试中，git是否正确提交分支
+
+测试保存源码是否会覆盖main或上传main
+
+现在vscode提交到分支source上，不影响main分支的代理
 
 # 使用教程
 
@@ -21,11 +26,7 @@ $ hexo clean && hexo generate && hexo deploy
 ```
 可以一键部署到远程服务器
 
-测试中，git是否正确提交分支
 
-测试保存源码是否会覆盖main或上传main
-
-现在vscode提交到分支source上，不影响main分支的代理
 
 ## **运维状况报告**
 
