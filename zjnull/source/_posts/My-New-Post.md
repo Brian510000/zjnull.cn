@@ -15,6 +15,7 @@ $ hexo clean && hexo generate && hexo deploy
 ```
 可以一键部署到远程服务器
 
+测试中，git是否正确提交分支
 
 ## **运维状况报告**
 
