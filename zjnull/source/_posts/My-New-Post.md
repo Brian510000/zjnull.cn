@@ -1,8 +1,14 @@
 ---
-title: 运维状况
-date: 2025-02-08 21:05:26
-tags: WebUI
+title: "Hexo 运维状况"
+date: 2025-02-12 20:00:00
+tags: ["Hexo", "博客"]
+categories: ["技术"]
+top_img: /img/7.jpg
+cover: /img/5.jpg
+toc: true
+comments: true
 ---
+
 # 使用教程
 
 ``` bash
