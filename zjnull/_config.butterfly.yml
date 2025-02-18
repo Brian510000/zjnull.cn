@@ -21,7 +21,7 @@ menu:
   時間軸: /archives/ || fas fa-archive
   標籤: /tags/ || fas fa-tags
   分類: /categories/ || fas fa-folder-open
-  音樂: /music/ || fas fa-music
+  音樂: https://c6.y.qq.com/base/fcgi-bin/u?__=RcB7yFqBThqr || fas fa-music
   照片: /Gallery/ || fas fa-images
   電影: /movies/ || fas fa-video
   關於: /about/ || fas fa-heart
