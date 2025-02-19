@@ -2,7 +2,8 @@
 title: Audio jumper
 date: 2025-02-18 21:06:33
 categories: ["技术"]
-tags: ["Hexo", "博客","防遗忘"]
+tags: ["Hexo", "博客"]
+comments: true
 ---
 
 # Voicemeeter 音频跳线

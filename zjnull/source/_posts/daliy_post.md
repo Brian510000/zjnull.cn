@@ -1,7 +1,7 @@
 ---
 title: "ZJNULL 更新评论区"
 date: 2025-02-12 22:16:00
-tags: ["Hexo", "博客","防遗忘"]
+tags: ["Hexo", "博客"]
 categories: ["技术"]
 top_img: /img/2.jpg
 cover: /img/5.jpg

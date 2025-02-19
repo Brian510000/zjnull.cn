@@ -27,7 +27,8 @@ comments: true
 有了节点之后，我们需要一款好用的代理软件，PC端用户这里推荐 Clash for Windows。下载地址如下：
 
 [Clash for Windows 下载](https://github.com/Z-Siqi/Clash-for-Windows_Chinese/releases/download/CFW-V0.20.27_CN/Clash.for.Windows-0.20.27-win.7z)
-> **安卓与苹果用户可以通过使用文档自行下载对应版本[使用文档](https://5maomao.xyz/index.php#/knowledge)**
+> **安卓与苹果用户可以通过使用文档自行下载对应版本**
+> **[使用文档](https://5maomao.xyz/index.php#/knowledge)**
 ### 安装步骤：
 1. 下载完成后，**解压文件**。
 2. 进入解压后的文件夹，找到**后缀为 `.exe` 的程序文件**。

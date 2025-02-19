@@ -269,7 +269,7 @@ footer:
   owner:
     enable: true
     since: 2025
-  custom_text: 还在维护中,导航栏指针未定义,界面UI待优化
+  custom_text: <a href="https://icp.gov.moe/?keyword=20250918" target="_blank">萌ICP备20250918号</a>
   # Copyright of theme and framework
   copyright: true
 
