@@ -1,10 +1,10 @@
 ---
 title: "Hexo 运维状况"
-date: 2025-02-12 20:00:00
+date: 2025-02-22 20:00:00
 tags: ["Hexo", "博客"]
 categories: ["技术"]
 top_img: /img/2.jpg
-cover: /img/5.jpg
+cover: https://raw.githubusercontent.com/Brian510000/pic_bed/main/web-site/5.jpg
 toc: true
 comments: true
 ---

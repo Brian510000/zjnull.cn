@@ -1,10 +1,10 @@
 ---
 title: "ZJNULL 更新评论区"
 date: 2025-02-12 22:16:00
-tags: ["Hexo", "博客"]
+tags: ["Hexo"]
 categories: ["技术"]
 top_img: /img/2.jpg
-cover: /img/5.jpg
+cover: https://raw.githubusercontent.com/Brian510000/pic_bed/main/web-site/5.jpg
 toc: true
 comments: true
 highlight_shrink: false  # 这一篇文章的代码块默认展开
