@@ -34,7 +34,7 @@ tags:
 1. **点击视频字幕选项**，如果没有字幕选项，可以尝试刷新页面。
 2. **找到字幕请求**，选中相关的请求。
 3. 在 **Response**（响应）中，复制字幕数据。
-   ![](https://raw.githubusercontent.com/Brian510000/pic_bed/main/web-site/20250223013141796.png)
+   ![](https://ghfast.top/https://raw.githubusercontent.com/Brian510000/pic_bed/main/web-site/20250223013141796.png)
 
 ### 5. 转换字幕格式
 

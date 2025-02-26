@@ -26,7 +26,7 @@ comments: true
 
 有了节点之后，我们需要一款好用的代理软件，PC 端用户这里推荐 Clash for Windows。下载地址如下：
 
-[Clash for Windows 下载](https://github.com/Z-Siqi/Clash-for-Windows_Chinese/releases/download/CFW-V0.20.27_CN/Clash.for.Windows-0.20.27-win.7z)
+[Clash for Windows 下载](https://ghfast.top/https://github.com/Z-Siqi/Clash-for-Windows_Chinese/releases/download/CFW-V0.20.27_CN/Clash.for.Windows-0.20.27-win.7z)
 
 > **安卓与苹果用户可以通过使用文档自行下载对应版本** > **[使用文档](https://5maomao.xyz/index.php#/knowledge)**
 
@@ -36,7 +36,7 @@ comments: true
 2. 进入解压后的文件夹，找到**后缀为 `.exe` 的程序文件**。
 3. 双击运行，即可打开 Clash。
 
-> **如果下载速度慢或者不会下载，下拉至底部，后续发布在评论区**
+> **~~如果下载速度慢或者不会下载，下拉至底部，后续发布在评论区~~已更新proxy下载源，不会卡龟速下载了**
 
 ---
 
@@ -47,12 +47,12 @@ comments: true
 1. 购买节点后，你会获得一个**订阅地址（URL）**。
 2. 打开 Clash，进入**订阅管理**，粘贴你的订阅地址。
 3. 点击**更新**，Clash 会自动拉取最新的节点。
-   ![](https://raw.githubusercontent.com/Brian510000/pic_bed/main/web-site/20250221234846545.png)
+   ![](https://ghfast.top/https://raw.githubusercontent.com/Brian510000/pic_bed/main/web-site/20250221234846545.png)
 
 ### 主页设置
 
 为了获得最佳体验，你可以按照我的设置进行配置，具体细节可以在软件界面自行调整。
-![](https://raw.githubusercontent.com/Brian510000/pic_bed/main/web-site/20250221234943576.png)
+![](https://ghfast.top/https://raw.githubusercontent.com/Brian510000/pic_bed/main/web-site/20250221234943576.png)
 
 ### 启用代理
 

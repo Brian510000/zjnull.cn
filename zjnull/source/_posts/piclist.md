@@ -1,6 +1,6 @@
 ---
 title: 通过Gitee镜像加速图床
-date: 2025-12-21 20:50:07
+date: 2025-02-21 20:50:07
 tags: ["Hexo", "博客"]
 categories: ["技术"]
 ---
@@ -9,7 +9,7 @@ categories: ["技术"]
 
 由于某些特殊原因，国内的 Gitee Pages 暂时无法提供服务，导致 Markdown 文件中的图片无法正常显示。此外，Gitee 可能会对 `raw` 链接的外部访问进行限制，使得某些平台（如 GitHub 及部分 Markdown 解析器）无法直接引用 Gitee 上的图片。
 
-![](https://raw.githubusercontent.com/Brian510000/pic_bed/main/web-site/image.png)
+![](https://ghfast.top/https://raw.githubusercontent.com/Brian510000/pic_bed/main/web-site/image.png)
 
 为了解决这一问题，我们可以搭建一个图床，将图片上传至 GitHub Pages，并通过 Gitee 对 GitHub Pages 仓库进行镜像，以 Gitee 提供的 `raw` 链接来引用图片。这种方法不仅能够加快国内访问速度，还能提高图片链接的稳定性。
 
@@ -93,7 +93,7 @@ categories: ["技术"]
 
 4. 点击 `设为默认图床`
 
-![](https://raw.githubusercontent.com/Brian510000/pic_bed/main/web-site/20250221233542832.png)
+![](https://ghfast.top/https://raw.githubusercontent.com/Brian510000/pic_bed/main/web-site/20250221233542832.png)
 
 ---
 
@@ -121,10 +121,12 @@ https://cdn.jsdelivr.net/gh/yourusername/image/main/
 
 ---
 
+> 注意：国内该 cdn 已失效
+
 ## 7. 测试上传
 
 1. 进入 **PicList 上传区**，选择一张图片。
-   ![](https://raw.githubusercontent.com/Brian510000/pic_bed/main/web-site/20250221234136757.png)
+   ![](https://ghfast.top/https://raw.githubusercontent.com/Brian510000/pic_bed/main/web-site/20250221234136757.png)
 2. 上传成功后，PicList 会自动生成 Markdown 格式的图片链接。
 
 3. 复制该链接，并在博客或文档中使用。

@@ -27,14 +27,14 @@ tags:
 3. 筛选**Fetch/XHR**类型
 4. **点击数字开头的标签**，进入 **Preview（预览）** 选项卡
 5. 在 **预览区域**，查找包含 **PDF 链接** 的字段。
-   ![](https://raw.githubusercontent.com/Brian510000/pic_bed/main/web-site/20250223014641519.png)
+   ![](https://ghfast.top/https://raw.githubusercontent.com/Brian510000/pic_bed/main/web-site/20250223014641519.png)
 
 ### 4. 获取 PDF 下载链接
 
 1. 找到 **PDF 文件链接**，通常以 `.pdf` 结尾。
 2. 右键点击链接，选择 **在新标签页打开**。
 3. 页面加载完成后，点击 **下载按钮** 保存 PDF。
-   ![](https://raw.githubusercontent.com/Brian510000/pic_bed/main/web-site/20250223015126105.png)
+   ![](https://ghfast.top/https://raw.githubusercontent.com/Brian510000/pic_bed/main/web-site/20250223015126105.png)
 
 ## 注意事项
 

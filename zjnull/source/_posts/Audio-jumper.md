@@ -25,10 +25,10 @@ comments: true
 
 ## 第三步：软件设置
 
-- 进入 Voicemeeter 软件的**HARDWARE OUT（硬件输出）**设置。
+- 进入 Voicemeeter 软件的**HARDWARE OUT(硬件输出)**设置。
 - 在**通道 A1** 处，选择带有**前缀 WDM** 的耳机设备。
   - 例如，如果你的耳机设备是 `音响(Realtek(R) Audio)`，则应选择 `WDM: 音响(Realtek(R) Audio)`。
 - **此步骤至关重要**，确保正确选择输出设备，以避免音频异常。
-  ![](https://raw.githubusercontent.com/Brian510000/pic_bed/main/web-site/999.png)
+  ![](https://ghfast.top/https://raw.githubusercontent.com/Brian510000/pic_bed/main/web-site/999.png)
 
 设置完成后，即可正常使用 Voicemeeter 进行音频管理！

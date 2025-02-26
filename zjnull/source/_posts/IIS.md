@@ -13,7 +13,7 @@ categories: ["技术"]
 
 1.  打开 **控制面板**，进入 **程序**
 2.  点击 **启用或关闭 Windows 功能**
-3.  在弹出的窗口中，勾选 **Internet 信息服务 (IIS)** 相关服务![](https://raw.githubusercontent.com/Brian510000/pic_bed/main/web-site/20250222044445458.png)
+3.  在弹出的窗口中，勾选 **Internet 信息服务 (IIS)** 相关服务![](https://ghfast.top/https://raw.githubusercontent.com/Brian510000/pic_bed/main/web-site/20250222044445458.png)
 4.  点击 **确定**，等待系统安装并配置 IIS
 
 ### 1.2 进入 IIS 管理器
@@ -71,7 +71,7 @@ hexo clean && hexo generate
 2.  将 `public/` 目录的内容复制到 IIS 站点的根目录。
 3.  确保 IIS 开启了静态文件服务：
     - 在 **IIS 管理器** 中，进入 **Handler Mappings**
-      ![](https://raw.githubusercontent.com/Brian510000/pic_bed/main/web-site/20250222045635576.png)
+      ![](https://ghfast.top/https://raw.githubusercontent.com/Brian510000/pic_bed/main/web-site/20250222045635576.png)
     - 确保 **StaticFile** 处理程序启用
 
 ### 2.3 绑定域名或访问
@@ -146,3 +146,5 @@ iisreset
 ---
 
 大功告成！已成功配置 IIS 以支持 Hexo 全部渲染依赖，并允许远程 API 访问。如有需要，可进一步优化 HTTPS 配置，确保网站安全性
+
+>[点击下载本站ZIP包](https://ghfast.top/https://github.com/Brian510000/zjnull.cn/archive/refs/heads/main.zip)
