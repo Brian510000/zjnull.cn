@@ -1,0 +1,438 @@
+/* 全局样式 */
+* {
+    margin: 0;
+    /* 去除默认的外边距 */
+    padding: 0;
+    /* 去除默认的内边距 */
+    box-sizing: border-box;
+    /* 确保元素的尺寸计算不包括边框和内边距 */
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    /* 使用清晰易读的字体 */
+    background: linear-gradient(135deg, #e0f7fa, #f1f8e9);
+    /* 舒适的渐变背景 */
+    color: #333;
+    /* 文字颜色为深灰，减少眼睛疲劳 */
+    line-height: 1.6;
+    /* 行间距适中，增加可读性 */
+    margin: 20px;
+    /* 给整个页面一些边距 */
+    font-family: 'Arial', sans-serif;
+    display: flex;
+    flex-direction: column;
+    /*align-items: center;  /*居中显示标题 */
+    justify-content: center;
+}
+
+/* 标题样式 */
+h1,
+h2,
+h3 {
+    color: #444;
+    /* 标题颜色稍微深一点，避免太刺眼 */
+    text-align: center;
+    /* 居中显示标题 */
+    margin-bottom: 20px;
+    /* 标题和正文之间留出足够的空隙 */
+}
+
+h1 {
+    font-size: 36px;
+    /* 一级标题较大 */
+}
+
+h2 {
+    font-size: 28px;
+    /* 二级标题较小 */
+}
+
+/* 段落样式 */
+p {
+    margin-bottom: 20px;
+    /* 段落之间的空隙 */
+    line-height: 1.8;
+    /* 增加行间距，使文本更加易读 */
+    font-size: 16px;
+    /* 字体大小适中 */
+}
+
+/* 超链接样式 */
+a {
+    color: #007BFF;
+    /* 蓝色超链接 */
+    text-decoration: none;
+    /* 去掉下划线 */
+    transition: color 0.3s ease;
+    /* 平滑的颜色过渡效果 */
+}
+a:hover {
+    color: #0056b3;
+    /* 鼠标悬停时，链接颜色变深 */
+}
+
+/* 按钮样式 */
+button {
+    background-color: #007BFF;
+    /* 按钮背景色为蓝色 */
+    color: white;
+    /* 按钮文字为白色 */
+    font-size: 16px;
+    /* 字体大小适中 */
+    padding: 10px 20px;
+    /* 上下左右的内边距，确保按钮大方 */
+    border: none;
+    /* 去掉默认的边框 */
+    border-radius: 5px;
+    /* 圆角按钮 */
+    cursor: pointer;
+    /* 鼠标悬停时显示为指针 */
+    transition: background-color 0.3s ease;
+    /* 平滑的背景色过渡效果 */
+}
+button:hover {
+    background-color: #0056b3;
+    /* 鼠标悬停时按钮颜色变深 */
+}
+
+/* 卡片样式 */
+.card {
+    width: 320px;
+    padding: 20px;
+    border-radius: 16px;
+    /* 让卡片更圆润 */
+    background: rgba(255, 255, 255, 0.2);
+    /* 玻璃拟态半透明背景 */
+    backdrop-filter: blur(10px);
+    /* 霜化效果 */
+    border: 1px solid rgba(255, 255, 255, 0.4);
+    /* 半透明边框 */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+    /* 柔和阴影 */
+    transition: all 0.3s ease-in-out;
+    position: relative;
+    overflow: hidden;
+}
+/* 卡片悬停效果 */
+.card:hover {
+    transform: translateY(-5px);
+    /* 轻微上浮 */
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
+    /* 悬停时增加阴影 */
+    border: 1px solid rgba(255, 255, 255, 0.6);
+    /* 加强边框 */
+}
+/* 卡片标题 */
+.card h3 {
+    font-size: 22px;
+    font-weight: bold;
+    color: #333;
+    text-align: center;
+}
+/* 卡片文本 */
+.card p {
+    font-size: 16px;
+    color: #555;
+    text-align: center;
+    line-height: 1.5;
+}
+/* 卡片按钮 */
+.card .btn {
+    display: block;
+    padding: 12px 20px;
+    background: linear-gradient(135deg, #00bcd4, #00796b);
+    color: #fff;
+    text-decoration: none;
+    border-radius: 8px;
+    font-size: 16px;
+    text-align: center;
+    margin-top: 15px;
+    transition: all 0.3s ease-in-out;
+    box-shadow: 0 4px 10px rgba(0, 188, 212, 0.4);
+}
+/* 按钮悬停效果 */
+.card .btn:hover {
+    background: linear-gradient(135deg, #00796b, #00bcd4);
+    transform: scale(1.05);
+    box-shadow: 0 6px 14px rgba(0, 188, 212, 0.6);
+}
+/* 让卡片容器居中 */
+.container {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+/* 表格样式 */
+table {
+    width: 100%;
+    /* 表格宽度占满父容器 */
+    border-collapse: collapse;
+    /* 去掉表格单元格之间的空隙 */
+    margin: 20px 0;
+    /* 表格上下留空 */
+}
+th,
+td {
+    padding: 12px;
+    /* 单元格内边距 */
+    text-align: left;
+    /* 内容左对齐 */
+    border-bottom: 1px solid #ddd;
+    /* 添加下边框，区分行 */
+}
+th {
+    background-color: #f0f0f0;
+    /* 表头背景色为浅灰 */
+    font-weight: bold;
+    /* 表头文字加粗 */
+}
+
+/* 响应式设计（确保在手机或平板上也能良好显示） */
+@media (max-width: 768px) {
+    body {
+        margin: 10px;
+        /* 在较小屏幕上减少页面边距 */
+    }
+
+    h1 {
+        font-size: 28px;
+        /* 在小屏幕上调整标题大小 */
+    }
+
+    h2 {
+        font-size: 22px;
+    }
+
+    p {
+        font-size: 14px;
+        /* 在小屏幕上调整字体大小 */
+    }
+
+    .card {
+        padding: 15px;
+        /* 在小屏幕上调整卡片内边距 */
+    }
+
+    table {
+        font-size: 14px;
+        /* 在小屏幕上调整表格字体大小 */
+    }
+}
+
+/* 基础按钮样式 */
+.btn {
+    width: 5%;
+        /* 宽度占满父容器 */
+    padding: 12px 20px;
+    /* 内边距 */
+    border: none;
+    /* 去除边框 */
+    border-radius: 8px;
+    /* 圆角 */
+    font-size: 16px;
+    /* 字体大小 */
+    font-weight: bold;
+    /* 字体加粗 */
+    text-align: center;
+    /* 文字居中 */
+    color: #fff;
+    /* 文字颜色 */
+    background: linear-gradient(135deg, #5cbe5f, #45a049);
+    /* 渐变绿色背景 */
+    cursor: pointer;
+    /* 鼠标指针变成点击手型 */
+    transition: all 0.3s ease;
+    /* 过渡效果 */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    /* 阴影效果 */
+}
+/* 悬停效果 */
+.btn:hover {
+    background: linear-gradient(135deg, #45a049, #388e3c);
+    /* 悬停时深绿色渐变 */
+    transform: scale(1.2);
+    /* 按钮放大 */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+    /* 阴影加深 */
+}
+/* 点击效果 */
+.btn:active {
+    transform: scale(0.98);
+    /* 点击时稍微缩小 */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    /* 还原阴影 */
+}
+/* 禁用状态 */
+.btn:disabled {
+    background-color: #ccc;
+    /* 灰色背景 */
+    cursor: not-allowed;
+    /* 禁用时鼠标指针变成不可点击样式 */
+    box-shadow: none;
+    /* 取消阴影 */
+}
+/* 按钮文本 */
+.btn span {
+    font-size: 18px;
+}
+
+/* 表格基础样式 */
+.styled-table {
+    width: 80%;
+    margin: 20px auto;
+    border-collapse: collapse;
+    font-size: 18px;
+    text-align: center;
+    border-radius: 10px;
+    /* 圆角 */
+    overflow: hidden;
+    /* 让圆角效果生效 */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    /* 添加轻微阴影 */
+}
+/* 表头样式 */
+.styled-table thead tr {
+    background: linear-gradient(135deg, #007BFF, #0056b3);
+    /* 渐变背景 */
+    color: #bac2ff;
+    /* 柔和的浅米色字体 */
+    font-weight: bold;
+    text-transform: uppercase;
+    /* 让表头字母大写，更有层次 */
+}
+/* 表头单元格 */
+.styled-table th {
+    padding: 12px 15px;
+    border-bottom: 3px solid #004080;
+    /* 加深底部边框，增强立体感 */
+}
+/* 表格边框 & 单元格 */
+.styled-table th,
+.styled-table td {
+    border: 1px solid #ddd;
+    padding: 10px 15px;
+}
+/* 斑马条纹效果（增强色彩对比度） */
+.styled-table tbody tr:nth-child(odd) {
+    background-color: #f8f9fa;
+    /* 更柔和的浅灰色 */
+}
+.styled-table tbody tr:nth-child(even) {
+    background-color: #eef3f7;
+    /* 更浅一点的蓝灰色 */
+}
+/* 鼠标悬停效果（渐变色+放大轻微阴影） */
+.styled-table tbody tr:hover {
+    background: linear-gradient(135deg, #d6e9ff, #c6e0ff);
+    transform: scale(1.01);
+    /* 轻微放大 */
+    transition: all 0.3s ease-in-out;
+}
+/* 让内容居中对齐 */
+.styled-table td {
+    font-size: 16px;
+    color: #333;
+    /* 深灰色，减少纯黑的视觉刺激 */
+}
+/* 表头增加渐变效果，让层次更丰富 */
+.styled-table thead {
+    background: linear-gradient(135deg, #007BFF, #0056b3);
+    color: #F5E6CC;
+}
+
+/* 🌟 现代化圆角输入框 */
+.input-box {
+    width: 100%;
+    max-width: 350px;
+    /* 限制最大宽度，适配桌面和移动端 */
+    padding: 12px 16px;
+    font-size: 16px;
+    color: #333;
+    border: 2px solid #ccc;
+    border-radius: 15px;
+    /* 圆角效果 */
+    outline: none;
+    background: #f9f9f9;
+    transition: all 0.3s ease-in-out;
+    /* 动画过渡 */
+}
+/* 🌟 聚焦时：边框变色 + 放大 + 高亮效果 */
+.input-box:focus {
+    border-color: #4caf50;
+    /* 聚焦时边框变绿色 */
+    box-shadow: 0 0 8px rgba(76, 175, 80, 0.5);
+    /* 高亮阴影 */
+    background: #ffffff;
+    /* 背景变白 */
+}
+/* 🌟 输入框悬停时：轻微放大 + 阴影 */
+.input-box:hover {
+    transform: scale(1.05);
+    /* 悬停时放大 */
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    /* 悬停时阴影效果 */
+}
+/* 🌟 占位符样式 */
+.input-box::placeholder {
+    color: #aaa;
+    /* 轻灰色占位符 */
+    transition: opacity 0.3s ease-in-out;
+}
+/* 🌟 聚焦时隐藏占位符 */
+.input-box:focus::placeholder {
+    opacity: 0;
+    /* 聚焦时隐藏占位符 */
+}
+/* 🌟 与下行文本保持合理间距 */
+.input-container {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    /* 设置输入框与下行文本的间距 */
+}
+
+/* 基础图片样式 */
+img {
+    width: 100%;
+    max-width: 350px;
+    /* 限制最大宽度 */
+    border-radius: 20px;
+    /* 圆角效果 */
+    transition: all 0.4s ease;
+    /* 更平滑的过渡效果 */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    /* 初始柔和阴影 */
+    object-fit: cover;
+    /* 保证图片覆盖容器，保持比例 */
+    transform: scale(1);
+    /* 默认大小 */
+}
+/* 悬停时的光影与放大效果 */
+img:hover {
+
+    transform-origin: center center;
+    /* 缩放时以中心为基准 */
+    background-color: #fff;
+    /* 背景色变化 */
+    
+    transform: scale(2) translateY(-80px);
+    /* 向上偏移8px */
+    box-shadow: 0 15px 25px rgba(0, 0, 0, 0.2);
+    /* 强化阴影效果 */
+    background-color: #fff;
+    /* 背景色变化 */
+        
+}
+/* 可选：微小阴影与渐变边框效果 */
+img:hover {
+    border: 3px solid transparent;
+    /* 初始透明边框 */
+    background-image: linear-gradient(135deg, #4f9fff, #63b3ed);
+    /* 渐变边框 */
+    background-origin: border-box;
+    background-clip: border-box;
+    /* 背景限定在边框区域 */
+}
