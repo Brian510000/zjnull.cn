@@ -230,8 +230,10 @@ th {
     /* 内边距 */
     border: none;
     /* 去除边框 */
-    border-radius: 8px;
+    border-radius: 30px;
     /* 圆角 */
+    padding: 12px 30px;
+            
     font-size: 16px;
     /* 字体大小 */
     font-weight: bold;

@@ -101,7 +101,7 @@
 
 
 <style>
-    * {
+    /* * {
 
         margin: 0;
 
@@ -111,7 +111,7 @@
 
         font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 
-    }
+    } */
 
     body {
 
@@ -249,7 +249,7 @@
 
     }
 
-    .btn {
+    /* .btn {
 
         background: linear-gradient(45deg, #4CAF50, #45a049);
 
@@ -285,7 +285,7 @@
 
         box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
 
-    }
+    } */
 
     .game-over {
 
@@ -320,9 +320,8 @@
     }
 </style>
 
-</head>
 
-<body>
+<body style="align-items: center;">
 
     <div class="game-container">
 
@@ -372,7 +371,7 @@
 
         <div class="controls">
 
-            <button class="btn" id="startBtn">开始游戏</button>
+            <button class="btn" id="startBtn" style="width: 100%;" >开始游戏</button>
 
         </div>
 
@@ -384,7 +383,7 @@
 
         <p>最终得分: <span id="finalScore">0</span></p>
 
-        <button class="btn" onclick="location.reload()">再来一局</button>
+        <button class="btn" onclick="location.reload()" style="width: 30%;">再来一局</button>
 
     </div>
 
