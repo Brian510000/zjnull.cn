@@ -1,7 +1,8 @@
 ---
 title: chaoxing
 date: 2025-02-23 01:52:27
-tags:
+tags: ["Hexo", "博客"]
+categories: ["技术"]
 ---
 
 # 学习通无法下载 PDF 解决方案

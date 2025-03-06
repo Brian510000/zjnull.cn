@@ -4,6 +4,7 @@ date: 2025-02-25 20:54:26
 tags: ["Hexo", "博客"]
 categories: ["技术"]
 comments: true
+cover: https://unsplash.com/photos/ZV_64LdGoao/download?ixid=M3wxMjA3fDB8MXxhbGx8fHx8fHx8fHwxNzQwNzY1MjQ1fA&force=true
 ---
 
 # WSL2：将 Windows 与 Linux 无缝结合

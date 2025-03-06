@@ -1,12 +1,15 @@
 ---
 title: 使用docker启动mysql服务
 date: 2025-02-28 19:00:39
-tags:
+tags: ["Hexo", "博客"]
+categories: ["技术"]
+top_img: /img/2.jpg
+cover: https://th.bing.com/th/id/R.db9df5dc112132016f5c0d349fc1f27b?rik=VJoc8yLukZ96DA&riu=http%3a%2f%2fwww.yunweipai.com%2fwp-content%2fthemes%2fzYwp%2fimages%2fguide%2fdocker.png&ehk=eS6zmRRfkRxPIOxXNI8yfsUHh6R8Lq%2bOG%2fIpQ0VPfQQ%3d&risl=&pid=ImgRaw&r=0
 ---
 
 
 # 前言
-我强烈不推荐在Windows上安装MySQL，学习阶段我强烈推荐用**docker安装MySQL**，当时我在Windows上安装MySQL卡的我想哭，我今天用docker安装用了不到5分钟，几条命令就完成了，拉取镜像，创建容器就完成了，然后你就可以远程链接学习了，我真后悔没有早知道docker安装这么好了，而且docker安装的容错率是真高，学习难免命令输错，用docker安装，你把MySQL玩炸了也没事，重建容器就行
+我强烈不推荐在Windows上安装MySQL，学习阶段我强烈推荐用**docker安装MySQL**，当时我在Windows上安装MySQL卡的我想哭，我今天用docker安装用了不到5分钟，几条命令就完成了，拉取镜像，创建容器就完成了，然后你就可以远程链接学习了，我真后悔没有早知道docker安装这么好了，而且docker安装的容错率是真高，学习难免命令输错，用docker安装，把MySQL玩炸了也没事，重建容器就行
 
 # 安装docker
 
@@ -26,11 +29,11 @@ tags:
 ## 2. 安装 Docker Desktop
 
 1.  访问 Docker 官网 https://www.docker.com/products/docker-desktop 下载 Docker Desktop 最新版本
-    >[点击这里跳转GitHub安装](https://github.com/tech-shrimp/docker_installer/releases/tag/latest)
+    >[或点击这里跳转GitHub安装](https://github.com/tech-shrimp/docker_installer/releases/tag/latest)
     
     ![](https://ghfast.top/https://raw.githubusercontent.com/Brian510000/pic_bed/main/web-site/20250228191701994.png)
 2.  双击安装程序，并按照提示安装
-	>指定安装位置可执行
+	>想要指定安装位置可执行
 
 
 	```
@@ -234,6 +237,7 @@ docker start <容器ID或容器名称>
 docker start my-mysql
 ```
 ![](https://ghfast.top/https://raw.githubusercontent.com/Brian510000/pic_bed/main/web-site/20250228195742389.png)
+>请确保 Docker Desktop 正在运行。Docker Desktop 必须在后台运行，WSL 2 才能访问 Docker 服务
 如果不知道容器 ID 或名称，可以先使用以下命令查看所有容器（包括已停止的）：
 
 ```

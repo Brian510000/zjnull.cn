@@ -1,0 +1,560 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>作业</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <!-- 标题 -->
+    <h1>这是一个未渲染的HTML页面</h1>
+    <h2>这是一个未渲染的HTML页面</h2>
+    <h3>这是一个未渲染的HTML页面</h3>
+    <!-- <h4>这是一个未渲染的HTML页面</h4>
+    <h5>这是一个未渲染的HTML页面</h5>
+    <h6>这是一个未渲染的HTML页面</h6> -->
+    <!-- 段落 -->
+    <p>这是一个示例网页，展示HTML中的一些常用标签。</p>
+    <p>HTML（超文本标记语言）用于创建网页内容。</p>
+
+    <!-- 链接 -->
+    <a href="https://www.zjnull.cn" target="_blank">访问主页</a>
+
+    <button class="btn" style="width: 20%;" href="https://ghfast.top/https://raw.githubusercontent.com/Brian510000/zjnull.cn/refs/heads/main/homeworks/style.css" target="_blank">
+        下载本页面style样式
+    </button>
+
+    <!-- 图片 -->
+    <img src="https://ghfast.top/https://raw.githubusercontent.com/Brian510000/pic_bed/main/web-site/20250301054549028.png" alt="示例图片" />
+
+    <!-- 列表 -->
+    <h4>这是一组无序列表</h4>
+    <ul>
+        <li>学习HTML</li>
+        <li>学习CSS</li>
+        <li>学习JavaScript</li>
+    </ul>
+    <h4>这是一组有序列表</h4>
+    <!-- 有序列表 -->
+    <ol>
+        <li>第一步：学习HTML</li>
+        <li>第二步：学习CSS</li>
+        <li>第三步：学习JavaScript</li>
+    </ol>
+
+    <!-- 表格 -->
+    <table border="1">
+        <tr>
+            <th>姓名</th>
+            <th>年龄</th>
+        </tr>
+        <tr>
+            <td>张三</td>
+            <td>25</td>
+        </tr>
+        <tr>
+            <td>李四</td>
+            <td>30</td>
+        </tr>
+    </table>
+
+    <table class="styled-table">
+                <tr>
+                    <th>姓名</th>
+                    <th>年龄</th>
+                </tr>
+                <tr>
+                    <td>张三</td>
+                    <td>25</td>
+                </tr>
+                <tr>
+                    <td>李四</td>
+                    <td>30</td>
+                </tr>
+    </table>
+
+
+    <!-- 表单 -->
+    <form action="/submit" method="POST">
+        <label for="name">姓名：</label>
+        <input type="text" id="name" name="name" required />
+        <br />
+        <label for="email">电子邮件：</label>
+        <input type="email" id="email" name="email" required />
+        <br />
+        <input type="submit" value="提交" />
+    </form>
+
+    <!-- 块级元素 -->
+    <div>
+        <h3>关于HTML</h3>
+        <p>HTML是网页的骨架，所有网页的内容都是通过HTML来定义的。</p>
+    </div>
+
+    <!-- 内联元素 -->
+    <span>这是一个内联元素。</span>
+    <p>图片UI未作圆角、叠加处理</p>
+
+</body>
+
+
+<style>
+    /* * {
+
+        margin: 0;
+
+        padding: 0;
+
+        box-sizing: border-box;
+
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+
+    } */
+
+    body {
+
+        background: linear-gradient(135deg, #83a4d4, #b6fbff);
+
+        min-height: 100vh;
+
+        display: flex;
+
+        flex-direction: column;
+
+        align-items: center;
+
+        padding: 2rem;
+
+    }
+
+    .game-container {
+
+        background: rgba(255, 255, 255, 0.9);
+
+        border-radius: 20px;
+
+        padding: 2rem;
+
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+
+        width: 90%;
+
+        max-width: 600px;
+
+    }
+
+    .game-header {
+
+        text-align: center;
+
+        margin-bottom: 2rem;
+
+    }
+
+    .game-title {
+
+        color: #2c3e50;
+
+        font-size: 2.5rem;
+
+        margin-bottom: 0.5rem;
+
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+
+    }
+
+    .game-info {
+
+        display: flex;
+
+        justify-content: space-between;
+
+        margin-bottom: 1.5rem;
+
+        font-size: 1.2rem;
+
+        color: #34495e;
+
+    }
+
+    .game-field {
+
+        display: grid;
+
+        grid-template-columns: repeat(3, 1fr);
+
+        gap: 1rem;
+
+        margin: 0 auto;
+
+    }
+
+    .hole {
+
+        position: relative;
+
+        width: 100%;
+
+        padding-bottom: 100%;
+
+        background: #8d6e63;
+
+        border-radius: 50%;
+
+        overflow: hidden;
+
+        cursor: pointer;
+
+        transition: transform 0.1s;
+
+    }
+
+    .hole:active {
+
+        transform: scale(0.95);
+
+    }
+
+    .mole {
+
+        position: absolute;
+
+        width: 70%;
+
+        height: 70%;
+
+        left: 15%;
+
+        bottom: -30%;
+
+        background: url('4.png') no-repeat center/contain;
+
+        transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+
+    }
+
+    .mole.active {
+
+        bottom: 15%;
+
+    }
+
+    .controls {
+
+        margin-top: 2rem;
+
+        text-align: center;
+
+    }
+
+    /* .btn {
+
+        background: linear-gradient(45deg, #4CAF50, #45a049);
+
+        color: white;
+
+        border: none;
+
+        padding: 12px 30px;
+
+        border-radius: 30px;
+
+        font-size: 1.1rem;
+
+        cursor: pointer;
+
+        transition: all 0.3s;
+
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+
+    }
+
+    .btn:hover {
+
+        transform: translateY(-2px);
+
+        box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+
+    }
+
+    .btn:active {
+
+        transform: translateY(0);
+
+        box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+
+    } */
+
+    .game-over {
+
+        position: fixed;
+
+        top: 0;
+
+        left: 0;
+
+        right: 0;
+
+        bottom: 0;
+
+        background: rgba(0, 0, 0, 0.8);
+
+        display: none;
+
+        justify-content: center;
+
+        align-items: center;
+
+        color: white;
+
+        flex-direction: column;
+
+    }
+
+    .game-over.show {
+
+        display: flex;
+
+    }
+</style>
+
+
+<body>
+
+    <div class="game-container">
+
+        <div class="game-header">
+
+            <h1 class="game-title">🎯 欢乐打地鼠</h1>
+
+            <div class="game-info">
+
+                <div>得分: <span id="score">0</span></div>
+
+                <div>剩余时间: <span id="timer">30</span> 秒</div>
+
+            </div>
+
+        </div>
+
+
+
+        <div class="game-field">
+
+            <div class="hole">
+                <div class="mole"></div>
+            </div>
+
+            <div class="hole">
+                <div class="mole"></div>
+            </div>
+
+            <div class="hole">
+                <div class="mole"></div>
+            </div>
+
+            <div class="hole">
+                <div class="mole"></div>
+            </div>
+
+            <div class="hole">
+                <div class="mole"></div>
+            </div>
+
+            <div class="hole">
+                <div class="mole"></div>
+            </div>
+            <div class="hole">
+                <div class="mole"></div>
+            </div>
+            
+            <div class="hole">
+                <div class="mole"></div>
+            </div>
+            
+            <div class="hole">
+                <div class="mole"></div>
+            </div>
+
+        </div>
+
+        <div class="controls">
+
+            <button class="btn" id="startBtn" style="width: 100%;" >开始游戏</button>
+
+        </div>
+
+    </div>
+
+    <div class="game-over" id="gameOver">
+
+        <h2>游戏结束！</h2>
+
+        <p>最终得分: <span id="finalScore">0</span></p>
+
+        <button class="btn" onclick="location.reload()" style="width: 30%;">再来一局</button>
+
+    </div>
+
+    <script>
+
+        const holes = document.querySelectorAll('.hole');
+
+        const moles = document.querySelectorAll('.mole');
+
+        const startBtn = document.getElementById('startBtn');
+
+        const scoreElement = document.getElementById('score');
+
+        const timerElement = document.getElementById('timer');
+
+        const gameOverElement = document.getElementById('gameOver');
+
+        const finalScoreElement = document.getElementById('finalScore');
+
+        let score = 0;
+
+        let timeLeft = 30;
+
+        let gameActive = false;
+
+        let popupInterval;
+
+        function randomTime(min, max) {
+
+            return Math.random() * (max - min) + min;
+
+        }
+
+        function randomHole() {
+
+            const index = Math.floor(Math.random() * holes.length);
+
+            return holes[index];
+
+        }
+
+        function popUpMole() {
+
+            if (!gameActive) return;
+
+
+
+            const hole = randomHole();
+
+            const mole = hole.querySelector('.mole');
+
+
+
+            mole.classList.add('active');
+
+            hole.addEventListener('click', whackMole, { once: true });
+
+            setTimeout(() => {
+
+                mole.classList.remove('active');
+
+            }, 1000);
+
+        }
+
+        function whackMole(e) {
+
+            if (!gameActive) return;
+
+
+
+            score += 10;
+
+            scoreElement.textContent = score;
+
+            e.target.parentElement.querySelector('.mole').classList.add('whacked');
+
+            setTimeout(() => {
+
+                e.target.parentElement.querySelector('.mole').classList.remove('whacked');
+
+            }, 200);
+
+        }
+
+        function startGame() {
+
+            gameActive = true;
+
+            score = 0;
+
+            timeLeft = 30;
+
+            scoreElement.textContent = score;
+
+            timerElement.textContent = timeLeft;
+
+            startBtn.disabled = true;
+
+
+
+            popupInterval = setInterval(() => {
+
+                popUpMole();
+
+            }, 1000);
+
+            const timer = setInterval(() => {
+
+                timeLeft--;
+
+                timerElement.textContent = timeLeft;
+
+
+
+                if (timeLeft <= 0) {
+
+                    clearInterval(timer);
+
+                    clearInterval(popupInterval);
+
+                    endGame();
+
+                }
+
+            }, 1000);
+
+        }
+
+        function endGame() {
+
+            gameActive = false;
+
+            gameOverElement.classList.add('show');
+
+            finalScoreElement.textContent = score;
+
+            startBtn.disabled = false;
+
+        }
+
+        startBtn.addEventListener('click', startGame);
+
+        // 添加触摸支持
+
+        holes.forEach(hole => {
+
+            hole.addEventListener('touchstart', function (e) {
+
+                e.preventDefault();
+
+                this.click();
+
+            });
+
+        });
+
+    </script>
+
+</body>
+
+
+</html>

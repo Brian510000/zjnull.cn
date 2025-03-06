@@ -1,7 +1,9 @@
 ---
 title: 关于VS code插件的碎碎念
 date: 2025-02-23 05:33:38
-tags:
+tags: ["Hexo", "博客"]
+categories: ["技术"]
+cover: https://unsplash.com/photos/_SgRNwAVNKw/download?ixid=M3wxMjA3fDB8MXxhbGx8fHx8fHx8fHwxNzQwNzY2MzQ4fA&force=true
 ---
 
 
