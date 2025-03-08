@@ -18,12 +18,12 @@ nav:
 
 menu:
   首頁: / || fas fa-home
-  时间轴: /archives/ || fas fa-archive
   标签: /tags/ || fas fa-tags
   分类: /categories/ || fas fa-folder-open
   音乐: https://c6.y.qq.com/base/fcgi-bin/u?__=RcB7yFqBThqr || fas fa-music
   照片: /Gallery/ || fas fa-images
   作业: /homeworks/ || fa-solid fa-book-skull
+  DS-R1: /DS-R1/ || fa-brands fa-airbnb
   关于: /about/ || fas fa-heart
 
 # --------------------------------------

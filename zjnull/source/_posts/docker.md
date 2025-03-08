@@ -1,5 +1,5 @@
 ---
-title: 使用docker启动mysql服务
+title: 使用Docker启动MySQL服务
 date: 2025-02-28 19:00:39
 tags: ["Hexo", "博客"]
 categories: ["技术"]
@@ -237,7 +237,13 @@ docker start <容器ID或容器名称>
 docker start my-mysql
 ```
 ![](https://ghfast.top/https://raw.githubusercontent.com/Brian510000/pic_bed/main/web-site/20250228195742389.png)
+
+
+
 >请确保 Docker Desktop 正在运行。Docker Desktop 必须在后台运行，WSL 2 才能访问 Docker 服务
+
+
+
 如果不知道容器 ID 或名称，可以先使用以下命令查看所有容器（包括已停止的）：
 
 ```
