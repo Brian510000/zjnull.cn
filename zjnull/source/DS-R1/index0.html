@@ -5,40 +5,18 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>GPT Chat</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            text-align: center;
-        }
-
-        #chatbox {
-            width: 80%;
-            height: 400px;
-            border: 1px solid #ccc;
-            overflow-y: auto;
-            margin: 20px auto;
-            padding: 10px;
-        }
-
-        #userInput {
-            width: 70%;
-            padding: 10px;
-        }
-
-        #sendButton {
-            padding: 10px;
-            cursor: pointer;
-        }
-    </style>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
 </head>
 
 <body>
     <h1>GPT Chat</h1>
     <div id="chatbox"></div>
-    <input type="text" id="userInput" placeholder="输入你的消息">
-    <button id="sendButton">发送</button>
-    <p>css样式等有空了再搞，没有写过程函数，是一下子全部输出完的，还很简陋，后面再优化</p>
-    <a href="https://zjnull.cn">返回主页</a>
+    <input class="input-box" type="text" id="userInput" placeholder="输入你的消息">
+    <button class="btn" style="width: 10%;" id="sendButton">发送</button>
+    <p></p>
+    <a class="btn" href="https://zjnull.cn" style="text-decoration: none;" target="_blank">返回主页</a>
+
     <script>
         // 🚨 关键配置
         const apiKey = "sk-ba784d45abaa4518b5714f5e74ba9c5b"; // 请替换为有效密钥
@@ -49,17 +27,18 @@
         // 消息展示函数
         function appendMessage(sender, message) {
             const msgDiv = document.createElement("div");
-            msgDiv.innerHTML = `<strong>${sender}:</strong> ${message}`;
+            msgDiv.innerHTML = `<strong>${sender}:</strong> <br>${marked.parse(message)}`;
             chatbox.appendChild(msgDiv);
             chatbox.scrollTop = chatbox.scrollHeight;
         }
+
 
         // 发送消息函数
         async function sendMessage() {
             const userMessage = userInput.value.trim();
             if (!userMessage) return;
 
-            appendMessage("你", userMessage);
+            appendMessage("我", userMessage);
             userInput.value = "";
 
             try {
