@@ -1,67 +1,308 @@
-<!DOCTYPE html>
-<html lang="zh">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>GPT Chat</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            text-align: center;
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0,viewport-fit=cover"><title>DS-R1 | ZJNULL</title><meta name="author" content="花开一百年"><meta name="copyright" content="花开一百年"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="#chatbox {         width: 80%;         height: 400px;         border: 1px solid #ccc;         overflow-y: auto;         margin: 20px auto;         padding: 10px;     }     #userInput {">
+<meta property="og:type" content="website">
+<meta property="og:title" content="DS-R1">
+<meta property="og:url" content="https://zjnull.cn/DS-R1/index.html">
+<meta property="og:site_name" content="ZJNULL">
+<meta property="og:description" content="#chatbox {         width: 80%;         height: 400px;         border: 1px solid #ccc;         overflow-y: auto;         margin: 20px auto;         padding: 10px;     }     #userInput {">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://zjnull.cn/img/3.png">
+<meta property="article:published_time" content="2025-03-08T06:14:13.000Z">
+<meta property="article:modified_time" content="2025-03-10T16:15:46.816Z">
+<meta property="article:author" content="花开一百年">
+<meta property="article:tag" content="还不知道什么是这个,keyword在这里">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://zjnull.cn/img/3.png"><link rel="shortcut icon" href="/img/favicon.png"><link rel="canonical" href="https://zjnull.cn/DS-R1/index.html"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css"><script>
+    (() => {
+      
+    const saveToLocal = {
+      set: (key, value, ttl) => {
+        if (!ttl) return
+        const expiry = Date.now() + ttl * 86400000
+        localStorage.setItem(key, JSON.stringify({ value, expiry }))
+      },
+      get: key => {
+        const itemStr = localStorage.getItem(key)
+        if (!itemStr) return undefined
+        const { value, expiry } = JSON.parse(itemStr)
+        if (Date.now() > expiry) {
+          localStorage.removeItem(key)
+          return undefined
         }
+        return value
+      }
+    }
 
-        #chatbox {
-            width: 80%;
-            height: 400px;
-            border: 1px solid #ccc;
-            overflow-y: auto;
-            margin: 20px auto;
-            padding: 10px;
+    window.btf = {
+      saveToLocal,
+      getScript: (url, attr = {}) => new Promise((resolve, reject) => {
+        const script = document.createElement('script')
+        script.src = url
+        script.async = true
+        Object.entries(attr).forEach(([key, val]) => script.setAttribute(key, val))
+        script.onload = script.onreadystatechange = () => {
+          if (!script.readyState || /loaded|complete/.test(script.readyState)) resolve()
         }
+        script.onerror = reject
+        document.head.appendChild(script)
+      }),
+      getCSS: (url, id) => new Promise((resolve, reject) => {
+        const link = document.createElement('link')
+        link.rel = 'stylesheet'
+        link.href = url
+        if (id) link.id = id
+        link.onload = link.onreadystatechange = () => {
+          if (!link.readyState || /loaded|complete/.test(link.readyState)) resolve()
+        }
+        link.onerror = reject
+        document.head.appendChild(link)
+      }),
+      addGlobalFn: (key, fn, name = false, parent = window) => {
+        if (!true && key.startsWith('pjax')) return
+        const globalFn = parent.globalFn || {}
+        globalFn[key] = globalFn[key] || {}
+        globalFn[key][name || Object.keys(globalFn[key]).length] = fn
+        parent.globalFn = globalFn
+      }
+    }
+  
+      
+      const activateDarkMode = () => {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+        }
+      }
+      const activateLightMode = () => {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
+        }
+      }
 
-        #userInput {
-            width: 70%;
-            padding: 10px;
-        }
+      btf.activateDarkMode = activateDarkMode
+      btf.activateLightMode = activateLightMode
 
-        #sendButton {
-            padding: 10px;
-            cursor: pointer;
-        }
-    </style>
-</head>
+      const theme = saveToLocal.get('theme')
+    
+          theme === 'dark' ? activateDarkMode() : theme === 'light' ? activateLightMode() : null
+        
+      
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        document.documentElement.classList.toggle('hide-aside', asideStatus === 'hide')
+      }
+    
+      
+    const detectApple = () => {
+      if (/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)) {
+        document.documentElement.classList.add('apple')
+      }
+    }
+    detectApple()
+  
+    })()
+  </script><script>const GLOBAL_CONFIG = {
+  root: '/',
+  algolia: undefined,
+  localSearch: undefined,
+  translate: undefined,
+  highlight: {"plugin":"highlight.js","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":false,"highlightFullpage":false,"highlightMacStyle":true},
+  copy: {
+    success: '复制成功',
+    error: '复制失败',
+    noSupport: '浏览器不支持'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: '',
+  dateSuffix: {
+    just: '刚刚',
+    min: '分钟前',
+    hour: '小时前',
+    day: '天前',
+    month: '个月前'
+  },
+  copyright: undefined,
+  lightbox: 'null',
+  Snackbar: undefined,
+  infinitegrid: {
+    js: 'https://cdn.jsdelivr.net/npm/@egjs/infinitegrid/dist/infinitegrid.min.js',
+    buttonText: '加载更多'
+  },
+  isPhotoFigcaption: false,
+  islazyloadPlugin: false,
+  isAnchor: false,
+  percent: {
+    toc: true,
+    rightside: false,
+  },
+  autoDarkmode: false
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: 'DS-R1',
+  isHighlightShrink: false,
+  isToc: false,
+  pageType: 'page'
+}</script><meta name="generator" content="Hexo 7.3.0"></head><body><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img text-center"><img src="/img/3.png" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="site-data text-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">26</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">10</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">2</div></a></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首頁</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page" target="_blank" rel="noopener" href="https://c6.y.qq.com/base/fcgi-bin/u?__=RcB7yFqBThqr"><i class="fa-fw fas fa-music"></i><span> 音乐</span></a></div><div class="menus_item"><a class="site-page" href="/Gallery/"><i class="fa-fw fas fa-images"></i><span> 照片</span></a></div><div class="menus_item"><a class="site-page" href="/homeworks/"><i class="fa-fw fa-solid fa-book-skull"></i><span> 作业</span></a></div><div class="menus_item"><a class="site-page" href="/DS-R1/"><i class="fa-fw fa-brands fa-airbnb"></i><span> DS-R1</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> 关于</span></a></div></div></div></div><div class="page type-DS-R1" id="body-wrap"><header class="not-home-page" id="page-header" style="background-image: url(/img/2.jpg);"><nav id="nav"><span id="blog-info"><a class="nav-site-title" href="/"><img class="site-icon" src="/img/4.png" alt="Logo"><span class="site-name">ZJNULL</span></a></span><div id="menus"><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首頁</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page" target="_blank" rel="noopener" href="https://c6.y.qq.com/base/fcgi-bin/u?__=RcB7yFqBThqr"><i class="fa-fw fas fa-music"></i><span> 音乐</span></a></div><div class="menus_item"><a class="site-page" href="/Gallery/"><i class="fa-fw fas fa-images"></i><span> 照片</span></a></div><div class="menus_item"><a class="site-page" href="/homeworks/"><i class="fa-fw fa-solid fa-book-skull"></i><span> 作业</span></a></div><div class="menus_item"><a class="site-page" href="/DS-R1/"><i class="fa-fw fa-brands fa-airbnb"></i><span> DS-R1</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> 关于</span></a></div></div><div id="toggle-menu"><span class="site-page"><i class="fas fa-bars fa-fw"></i></span></div></div></nav><div id="page-site-info"><h1 id="site-title">DS-R1</h1></div></header><main class="layout" id="content-inner"><div id="page"><div class="container" id="article-container">
+
+<style>
+    #chatbox {
+        width: 80%;
+        height: 400px;
+        border: 1px solid #ccc;
+        overflow-y: auto;
+        margin: 20px auto;
+        padding: 10px;
+    }
+    #userInput {
+        width: 70%;
+        padding: 10px;
+    }
+    #sendButton {
+        padding: 10px;
+        cursor: pointer;
+    }
+
+    .input-box {
+        width: 100%;
+        /* max-width: 350px; */
+        /* 限制最大宽度，适配桌面和移动端 */
+        padding: 12px 16px;
+        font-size: 16px;
+        color: #333;
+        border: 2px solid #ccc;
+        border-radius: 15px;
+        /* 圆角效果 */
+        outline: none;
+        background: #f9f9f9;
+        transition: all 0.3s ease-in-out;
+        /* 动画过渡 */
+    }
+    /* 🌟 聚焦时：边框变色 + 放大 + 高亮效果 */
+    .input-box:focus {
+        border-color: #4caf50;
+        /* 聚焦时边框变绿色 */
+        box-shadow: 0 0 8px rgba(76, 175, 80, 0.5);
+        /* 高亮阴影 */
+        background: #ffffff;
+        /* 背景变白 */
+    }
+    /* 🌟 输入框悬停时：轻微放大 + 阴影 */
+    .input-box:hover {
+        transform: scale(1.05);
+        /* 悬停时放大 */
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+        /* 悬停时阴影效果 */
+    }
+    /* 🌟 占位符样式 */
+    .input-box::placeholder {
+        color: #aaa;
+        /* 轻灰色占位符 */
+        transition: opacity 0.3s ease-in-out;
+    }
+    /* 🌟 聚焦时隐藏占位符 */
+    .input-box:focus::placeholder {
+        opacity: 0;
+        /* 聚焦时隐藏占位符 */
+    }
+    /* 🌟 与下行文本保持合理间距 */
+    .input-container {
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+        /* 设置输入框与下行文本的间距 */
+    }
+    /* 基础按钮样式 */
+    .btn {
+        width: 15%;
+        /* 宽度占满父容器 */
+        padding: 12px 20px;
+        /* 内边距 */
+        border: none;
+        /* 去除边框 */
+        border-radius: 30px;
+        /* 圆角 */
+        padding: 12px 30px;
+
+        font-size: 16px;
+        /* 字体大小 */
+        font-weight: bold;
+        /* 字体加粗 */
+        text-align: center;
+        /* 文字居中 */
+        color: #fff;
+        /* 文字颜色 */
+        background: linear-gradient(135deg, #5cbe5f, #45a049);
+        /* 渐变绿色背景 */
+        cursor: pointer;
+        /* 鼠标指针变成点击手型 */
+        transition: all 0.3s ease;
+        /* 过渡效果 */
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        /* 阴影效果 */
+    }
+    /* 悬停效果 */
+    .btn:hover {
+        background: linear-gradient(135deg, #45a049, #388e3c);
+        /* 悬停时深绿色渐变 */
+        transform: scale(1.2);
+        /* 按钮放大 */
+        box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+        /* 阴影加深 */
+    }
+    /* 点击效果 */
+    .btn:active {
+        transform: scale(0.98);
+        /* 点击时稍微缩小 */
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        /* 还原阴影 */
+    }
+    /* 禁用状态 */
+    .btn:disabled {
+        background-color: #ccc;
+        /* 灰色背景 */
+        cursor: not-allowed;
+        /* 禁用时鼠标指针变成不可点击样式 */
+        box-shadow: none;
+        /* 取消阴影 */
+    }
+    /* 按钮文本 */
+    .btn span {
+        font-size: 18px;
+    }
+</style>
 
 <body>
+<span style="font-family: Arial, sans-serif;text-align: center;">
     <h1>GPT Chat</h1>
     <div id="chatbox"></div>
-    <input type="text" id="userInput" placeholder="输入你的消息">
-    <button id="sendButton">发送</button>
-    <p>css样式等有空了再搞，没有写过程函数，是一下子全部输出完的，还很简陋，后面再优化</p>
-    <a href="https://zjnull.cn">返回主页</a>
+    <div  style="font-family: Arial, sans-serif;text-align: center;">
+    <input class="input-box" type="text" id="userInput" placeholder="输入你的消息">
+    <button class="btn" style="width: 10%;" id="sendButton">发送</button>
+    <p></p>
+    <a class="btn" href="https://zjnull.cn" style="text-decoration: none; color: #fff;" target="_blank">返回主页</a>
+    <a class="btn" href="index0.html" style="text-decoration: none; color: #fff;" target="_blank">旧版页面</a>
+    </div>   
     <script>
         // 🚨 关键配置
         const apiKey = "sk-ba784d45abaa4518b5714f5e74ba9c5b"; // 请替换为有效密钥
         const chatbox = document.getElementById("chatbox");
         const userInput = document.getElementById("userInput");
         const sendButton = document.getElementById("sendButton");
-
         // 消息展示函数
         function appendMessage(sender, message) {
             const msgDiv = document.createElement("div");
-            msgDiv.innerHTML = `<strong>${sender}:</strong> ${message}`;
+            msgDiv.innerHTML = `<strong>${sender}:</strong> <br>${marked.parse(message)}`;
             chatbox.appendChild(msgDiv);
             chatbox.scrollTop = chatbox.scrollHeight;
         }
-
         // 发送消息函数
         async function sendMessage() {
             const userMessage = userInput.value.trim();
             if (!userMessage) return;
-
-            appendMessage("你", userMessage);
+            appendMessage("我", userMessage);
             userInput.value = "";
-
             try {
                 const response = await fetch("https://api.deepseek.com/v1/chat/completions", {
                     method: "POST",
@@ -76,12 +317,10 @@
                         temperature: 0.5
                     })
                 });
-
                 // 处理HTTP错误状态码
                 if (!response.ok) {
                     throw new Error(`HTTP错误 ${response.status}`);
                 }
-
                 const data = await response.json();
                 if (data.choices?.[0]?.message?.content) {
                     appendMessage("DeepSeek", data.choices[0].message.content);
@@ -92,13 +331,170 @@
                 appendMessage("错误", `请求失败: ${error.message}`);
             }
         }
-
         // 事件绑定
         sendButton.addEventListener("click", sendMessage);
         userInput.addEventListener("keypress", (event) => {
             if (event.key === "Enter") sendMessage();
         });
     </script>
+</span>
 </body>
 
-</html>
+
+</div><hr class="custom-hr"/><div id="post-comment"><div class="comment-head"><div class="comment-headline"><i class="fas fa-comments fa-fw"></i><span> 评论</span></div></div><div class="comment-wrap"><div><div id="giscus-wrap"></div></div></div></div></div><div class="aside-content" id="aside-content"><div class="card-widget card-info text-center"><div class="avatar-img"><img src="/img/3.png" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info-name">花开一百年</div><div class="author-info-description"></div><div class="site-data"><a href="/archives/"><div class="headline">文章</div><div class="length-num">26</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">10</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">2</div></a></div><a id="card-info-btn" target="_blank" rel="noopener" href="https://github.com/Brian510000"><i class="fab fa-github"></i><span>Follow Me</span></a><div class="card-info-social-icons"><a class="social-icon" href="https://github.com/Brian510000" target="_blank" title="Github"><i class="fab fa-brands fa-git-alt" style="color: #24292e;"></i></a><a class="social-icon" href="mailto:croydefilippomz8544@gmail.com" target="_blank" title="Email"><i class="fas fa-brands fa-google" style="color: #4285F4;"></i></a><a class="social-icon" href="/img/7.jpg" target="_blank" title="WeChat"><i class="fab fa-brands fa-weixin" style="color: #1AAD19;"></i></a><a class="social-icon" href="tencent://message/?uin=3193429949&amp;Site=&amp;Menu=yes" target="_blank" title="QQ"><i class="fab fa-brands fa-qq" style="color: #12B7F5;"></i></a><a class="social-icon" href="https://space.bilibili.com/309421020" target="_blank" title="Bilibili"><i class="fab fa-brands fa-bilibili" style="color: #FB7299;"></i></a></div></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn fa-shake"></i><span>公告</span></div><div class="announcement_content">还在维护中,导航栏指针未定义,界面UI待优化</div></div><div class="sticky_layout"><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>最新文章</span></div><div class="aside-list"><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/a1/" title="第二颗心脏">第二颗心脏</a><time datetime="2025-03-09T16:36:23.000Z" title="发表于 2025-03-10 00:36:23">2025-03-10</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/sd-enlarge/" title="Stable Diffusion 超分辨率放大">Stable Diffusion 超分辨率放大</a><time datetime="2025-03-08T18:27:02.000Z" title="发表于 2025-03-09 02:27:02">2025-03-09</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/mysql/" title="MySQL 前三周">MySQL 前三周</a><time datetime="2025-03-07T12:48:42.000Z" title="发表于 2025-03-07 20:48:42">2025-03-07</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/sdpro/" title="进阶"><img src="https://ghfast.top/https://raw.githubusercontent.com/Brian510000/pic_bed/main/web-site/20250307191833908.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="进阶"/></a><div class="content"><a class="title" href="/sdpro/" title="进阶">进阶</a><time datetime="2025-03-07T11:14:28.000Z" title="发表于 2025-03-07 19:14:28">2025-03-07</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/sd-bases/" title="Stable Diffusion 十分钟上手"><img src="https://ghfast.top/https://raw.githubusercontent.com/Brian510000/pic_bed/main/web-site/20250307022542367.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="Stable Diffusion 十分钟上手"/></a><div class="content"><a class="title" href="/sd-bases/" title="Stable Diffusion 十分钟上手">Stable Diffusion 十分钟上手</a><time datetime="2025-03-06T18:09:35.000Z" title="发表于 2025-03-07 02:09:35">2025-03-07</time></div></div></div></div><div class="card-widget card-categories"><div class="item-headline">
+            <i class="fas fa-folder-open"></i>
+            <span>分类</span>
+            
+          </div>
+          <ul class="card-category-list" id="aside-cat-list">
+            <li class="card-category-list-item "><a class="card-category-list-link" href="/categories/%E6%8A%80%E6%9C%AF/"><span class="card-category-list-name">技术</span><span class="card-category-list-count">19</span></a></li><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/%E6%9D%82%E8%B0%88/"><span class="card-category-list-name">杂谈</span><span class="card-category-list-count">2</span></a></li>
+          </ul></div><div class="card-widget card-tags"><div class="item-headline"><i class="fas fa-tags"></i><span>标签</span></div><div class="card-tag-cloud"><a href="/tags/%E5%8D%9A%E5%AE%A2/" style="font-size: 1.37em; color: #99a4b2">博客</a> <a href="/tags/ComfyUI/" style="font-size: 1.23em; color: #999ea6">ComfyUI</a> <a href="/tags/%E6%9D%82%E8%B0%88/" style="font-size: 1.23em; color: #999ea6">杂谈</a> <a href="/tags/Python/" style="font-size: 1.1em; color: #999">Python</a> <a href="/tags/Docker/" style="font-size: 1.1em; color: #999">Docker</a> <a href="/tags/%E7%AC%94%E8%AE%B0/" style="font-size: 1.1em; color: #999">笔记</a> <a href="/tags/Hexo/" style="font-size: 1.5em; color: #99a9bf">Hexo</a> <a href="/tags/MySQL/" style="font-size: 1.23em; color: #999ea6">MySQL</a> <a href="/tags/Stable-Diffusion/" style="font-size: 1.23em; color: #999ea6">Stable Diffusion</a> <a href="/tags/%E8%87%AA%E5%8A%A8%E5%8C%96/" style="font-size: 1.1em; color: #999">自动化</a></div></div><div class="card-widget card-archives">
+    <div class="item-headline">
+      <i class="fas fa-archive"></i>
+      <span>归档</span>
+      
+    </div>
+  
+    <ul class="card-archive-list">
+      
+        <li class="card-archive-list-item">
+          <a class="card-archive-list-link" href="/archives/2025/03/">
+            <span class="card-archive-list-date">
+              三月 2025
+            </span>
+            <span class="card-archive-list-count">9</span>
+          </a>
+        </li>
+      
+        <li class="card-archive-list-item">
+          <a class="card-archive-list-link" href="/archives/2025/02/">
+            <span class="card-archive-list-date">
+              二月 2025
+            </span>
+            <span class="card-archive-list-count">17</span>
+          </a>
+        </li>
+      
+    </ul>
+  </div><div class="card-widget card-webinfo"><div class="item-headline"><i class="fas fa-chart-line"></i><span>网站信息</span></div><div class="webinfo"><div class="webinfo-item"><div class="item-name">文章数目 :</div><div class="item-count">26</div></div><div class="webinfo-item"><div class="item-name">本站访客数 :</div><div class="item-count" id="busuanzi_value_site_uv"><i class="fa-solid fa-spinner fa-spin"></i></div></div><div class="webinfo-item"><div class="item-name">本站总浏览量 :</div><div class="item-count" id="busuanzi_value_site_pv"><i class="fa-solid fa-spinner fa-spin"></i></div></div><div class="webinfo-item"><div class="item-name">最后更新时间 :</div><div class="item-count" id="last-push-date" data-lastPushDate="2025-03-10T16:18:43.198Z"><i class="fa-solid fa-spinner fa-spin"></i></div></div></div></div></div></div></main><footer id="footer" style="background-image: url(/img/2.jpg);"><div id="footer-wrap"><div class="copyright">&copy;2025 By 花开一百年</div><div class="framework-info"><span>框架 </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo</a><span class="footer-separator">|</span><span>主题 </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly</a></div><div class="footer_custom_text"><a href="https://icp.gov.moe/?keyword=20250918" target="_blank">萌ICP备20250918号</a></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="darkmode" type="button" title="日间和夜间模式切换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside-config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><a id="to_comment" href="#post-comment" title="前往评论"><i class="fas fa-comments"></i></a><button id="go-up" type="button" title="回到顶部"><span class="scroll-percent"></span><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><div class="js-pjax"><script>(() => {
+  const isShuoshuo = GLOBAL_CONFIG_SITE.pageType === 'shuoshuo'
+  const option = null
+
+  const getGiscusTheme = theme => theme === 'dark' ? 'dark' : 'light'
+
+  const createScriptElement = config => {
+    const ele = document.createElement('script')
+    Object.entries(config).forEach(([key, value]) => {
+      ele.setAttribute(key, value)
+    })
+    return ele
+  }
+
+  const loadGiscus = (el = document, key) => {
+    const mappingConfig = isShuoshuo
+      ? { 'data-mapping': 'specific', 'data-term': key }
+      : { 'data-mapping': (option && option['data-mapping']) || 'pathname' }
+
+    const giscusConfig = {
+      src: 'https://giscus.app/client.js',
+      'data-repo': 'Brian510000/comments',
+      'data-repo-id': 'R_kgDON4YPQQ',
+      'data-category-id': 'DIC_kwDON4YPQc4Cm5dh',
+      'data-theme': getGiscusTheme(document.documentElement.getAttribute('data-theme')),
+      'data-reactions-enabled': '1',
+      crossorigin: 'anonymous',
+      async: true,
+      ...option,
+      ...mappingConfig
+    }
+
+    const scriptElement = createScriptElement(giscusConfig)
+
+    el.querySelector('#giscus-wrap').appendChild(scriptElement)
+
+    if (isShuoshuo) {
+      window.shuoshuoComment.destroyGiscus = () => {
+        if (el.children.length) {
+          el.innerHTML = ''
+          el.classList.add('no-comment')
+        }
+      }
+    }
+  }
+
+  const changeGiscusTheme = theme => {
+    const iframe = document.querySelector('#giscus-wrap iframe')
+    if (iframe) {
+      const message = {
+        giscus: {
+          setConfig: {
+            theme: getGiscusTheme(theme)
+          }
+        }
+      }
+      iframe.contentWindow.postMessage(message, 'https://giscus.app')
+    }
+  }
+
+  btf.addGlobalFn('themeChange', changeGiscusTheme, 'giscus')
+
+  if (isShuoshuo) {
+    'Giscus' === 'Giscus'
+      ? window.shuoshuoComment = { loadComment: loadGiscus }
+      : window.loadOtherComment = loadGiscus
+    return
+  }
+
+  if ('Giscus' === 'Giscus' || !false) {
+    if (false) btf.loadComment(document.getElementById('giscus-wrap'), loadGiscus)
+    else loadGiscus()
+  } else {
+    window.loadOtherComment = loadGiscus
+  }
+})()</script></div><script src="https://cdn.jsdelivr.net/npm/pjax/pjax.min.js"></script><script>(() => {
+  const pjaxSelectors = ["link[rel=\"canonical\"]","meta[property=\"og:image\"]","meta[property=\"og:title\"]","meta[property=\"og:url\"]","head > title","#config-diff","#body-wrap","#rightside-config-hide","#rightside-config-show",".js-pjax"]
+
+  window.pjax = new Pjax({
+    elements: 'a:not([target="_blank"])',
+    selectors: pjaxSelectors,
+    cacheBust: false,
+    analytics: false,
+    scrollRestoration: false
+  })
+
+  const triggerPjaxFn = (val) => {
+    if (!val) return
+    Object.values(val).forEach(fn => fn())
+  }
+
+  document.addEventListener('pjax:send', () => {
+    // removeEventListener
+    btf.removeGlobalFnEvent('pjaxSendOnce')
+    btf.removeGlobalFnEvent('themeChange')
+
+    // reset readmode
+    const $bodyClassList = document.body.classList
+    if ($bodyClassList.contains('read-mode')) $bodyClassList.remove('read-mode')
+
+    triggerPjaxFn(window.globalFn.pjaxSend)
+  })
+
+  document.addEventListener('pjax:complete', () => {
+    btf.removeGlobalFnEvent('pjaxCompleteOnce')
+    document.querySelectorAll('script[data-pjax]').forEach(item => {
+      const newScript = document.createElement('script')
+      const content = item.text || item.textContent || item.innerHTML || ""
+      Array.from(item.attributes).forEach(attr => newScript.setAttribute(attr.name, attr.value))
+      newScript.appendChild(document.createTextNode(content))
+      item.parentNode.replaceChild(newScript, item)
+    })
+
+    triggerPjaxFn(window.globalFn.pjaxComplete)
+  })
+
+  document.addEventListener('pjax:error', e => {
+    if (e.request.status === 404) {
+      pjax.loadUrl('/404.html')
+    }
+  })
+})()</script><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div></body></html>

@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="zh">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GPT Chat</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+</head>
+
+<body>
+    <h1>GPT Chat</h1>
+    <div id="chatbox"></div>
+    <input class="input-box" type="text" id="userInput" placeholder="输入你的消息">
+    <button class="btn" style="width: 10%;" id="sendButton">发送</button>
+    <p></p>
+    <a class="btn" href="https://zjnull.cn" style="text-decoration: none;" target="_blank">返回主页</a>
+
+    <script>
+        // 🚨 关键配置
+        const apiKey = "sk-ba784d45abaa4518b5714f5e74ba9c5b"; // 请替换为有效密钥
+        const chatbox = document.getElementById("chatbox");
+        const userInput = document.getElementById("userInput");
+        const sendButton = document.getElementById("sendButton");
+
+        // 消息展示函数
+        function appendMessage(sender, message) {
+            const msgDiv = document.createElement("div");
+            msgDiv.innerHTML = `<strong>${sender}:</strong> <br>${marked.parse(message)}`;
+            chatbox.appendChild(msgDiv);
+            chatbox.scrollTop = chatbox.scrollHeight;
+        }
+
+
+        // 发送消息函数
+        async function sendMessage() {
+            const userMessage = userInput.value.trim();
+            if (!userMessage) return;
+
+            appendMessage("我", userMessage);
+            userInput.value = "";
+
+            try {
+                const response = await fetch("https://api.deepseek.com/v1/chat/completions", {
+                    method: "POST",
+                    headers: {
+                        "Content-Type": "application/json",
+                        "Authorization": `Bearer ${apiKey}`,
+                        "Accept": "application/json"
+                    },
+                    body: JSON.stringify({
+                        model: "deepseek-reasoner",
+                        messages: [{ role: "user", content: userMessage }],
+                        temperature: 0.5
+                    })
+                });
+
+                // 处理HTTP错误状态码
+                if (!response.ok) {
+                    throw new Error(`HTTP错误 ${response.status}`);
+                }
+
+                const data = await response.json();
+                if (data.choices?.[0]?.message?.content) {
+                    appendMessage("DeepSeek", data.choices[0].message.content);
+                } else {
+                    appendMessage("错误", "响应结构异常：" + JSON.stringify(data));
+                }
+            } catch (error) {
+                appendMessage("错误", `请求失败: ${error.message}`);
+            }
+        }
+
+        // 事件绑定
+        sendButton.addEventListener("click", sendMessage);
+        userInput.addEventListener("keypress", (event) => {
+            if (event.key === "Enter") sendMessage();
+        });
+    </script>
+</body>
+
+</html>
