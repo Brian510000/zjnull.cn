@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>GPT Chat</title>
     <link rel="stylesheet" href="style.css">
-    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+    <!-- <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script> -->
 </head>
 
 <body>
@@ -27,11 +27,10 @@
         // 消息展示函数
         function appendMessage(sender, message) {
             const msgDiv = document.createElement("div");
-            msgDiv.innerHTML = `<strong>${sender}:</strong> <br>${marked.parse(message)}`;
+            msgDiv.innerHTML = `<strong>${sender}:</strong> <br>${message}`;
             chatbox.appendChild(msgDiv);
             chatbox.scrollTop = chatbox.scrollHeight;
         }
-
 
         // 发送消息函数
         async function sendMessage() {
