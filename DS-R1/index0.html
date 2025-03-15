@@ -39,7 +39,7 @@
 
             appendMessage("我", userMessage);
             userInput.value = "";
-
+            
             try {
                 const response = await fetch("https://api.deepseek.com/v1/chat/completions", {
                     method: "POST",
