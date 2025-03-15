@@ -134,26 +134,26 @@ type: 'DS-R1'
 </style>
 
 <body>
-<span style="font-family: Arial, sans-serif;text-align: center;">
+    <span style="font-family: Arial, sans-serif;text-align: center;">
     <h1>GPT Chat</h1>
     <div id="chatbox"></div>
     <div  style="font-family: Arial, sans-serif;text-align: center;">
     <input class="input-box" type="text" id="userInput" placeholder="输入你的消息">
-    <button class="btn" style="width: 10%;" id="sendButton">发送</button>
+    <button class="btn" style="width: 15%;" id="sendButton">发送</button>
     <p></p>
     <a class="btn" href="https://zjnull.cn" style="text-decoration: none; color: #fff;" target="_blank">返回主页</a>
     <a class="btn" href="index0.html" style="text-decoration: none; color: #fff;" target="_blank">旧版页面</a>
-    </div>   
+    </div>
     <script>
         // 🚨 关键配置
-        const apiKey = "sk-ba784d45abaa4518b5714f5e74ba9c5b"; // 请替换为有效密钥
+        const apiKey = "sk-ba784d45abaa4518b5714f5e74ba9c5b"; // 没钱开服务器，只能写在前端QAQ
         const chatbox = document.getElementById("chatbox");
         const userInput = document.getElementById("userInput");
         const sendButton = document.getElementById("sendButton");
         // 消息展示函数
         function appendMessage(sender, message) {
             const msgDiv = document.createElement("div");
-            msgDiv.innerHTML = `<strong>${sender}:</strong> <br>${marked.parse(message)}`;
+            msgDiv.innerHTML = `<strong>${sender}:</strong> <br>${message}`;
             chatbox.appendChild(msgDiv);
             chatbox.scrollTop = chatbox.scrollHeight;
         }

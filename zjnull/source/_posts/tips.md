@@ -10,9 +10,38 @@ sticky: 999
 
 目前，zjnull本项目在 GitHub 仓库有两个分支：
 
->main 分支：Hexo 自动生成的静态网页文件（hexo clean && hexo g && hexo d）
+>main 分支：Hexo 生成的静态网页文件（hexo clean && hexo g && hexo d）
 
 >source 分支：在 VS Code 里手动推送的全部 Hexo 源码
+# 更新公告
+
+
+
+| 更新日期   | 类型       | 内容概要                                 | 仓库         |
+|------------|------------|------------------------------------------|--------------|
+| 2025-03-14 | Feat       | 上线 DeepSeek-R1 大模型及style优化      | Brian510000  |
+| 2025-03-10 | Docs       | 文章配置更新                   | Brian510000  |
+| 2025-03-03 | Perf       | zjnull.cn域名备案                   | Brian510000  |
+| 2025-03-01 | Perf       | 部署阿里云 SSL 证书                   | Brian510000  |
+| 2025-02-22 | Bug Fix    | 修复图片链接引用错误                     | Brian510000  |
+| 2025-02-15 | Docs       | Docker 部署 MySQL 服务          | Brian510000  |
+| 2025-02-14 | Perf       | 启用 GitHub Proxy 加速图片加载           | Brian510000  |
+| 2025-02-11 | Config     | 修正菜单项拼写与内容更新                 | Brian510000  |
+| 2025-02-09 | Docs       | MySQL/PicList 更新图床    | Brian510000  |
+| 2025-02-07 | Config     | 更新底部文本与文章标签体系               | Brian510000  |
+| 2025-02-06 | Refactor   | 移除子模块并重构主题文件结构             | Brian510000  |
+| 2025-02-06 | Config     | Clash 节点代理配置             | Brian510000  |
+| 2025-02-05 | Feat       | 发布音频跳线设置                     | Brian510000  |
+| 2025-02-04 | Config     | 图床服务集成与系统配置优化               | Brian510000  |
+| 2025-01-26 | Bug Fix    | 修正评论模块配置参数                     | Brian510000  |
+| 2025-01-25 | Feat       | 上线关于页面与运维状态看板               | Brian510000  |
+| 2025-01-20 | Feat       | 上线评论区板块                          | Brian510000  |
+| 2025-01-19 | Chore      | 清理冗余注释与调试代码                   | Brian510000  |
+| 2025-01-12 | Refactor   | 重构 Butterfly 主题目录结构              | Brian510000  |
+| 2025-01-11 | Test       | 完成源码兼容性测试                       | Brian510000  |
+| 2025-01-09 | Chore      | 归档 ZJNULL.CN 基础源码                  | Brian510000  |
+
+---
 
 ## 关于 Hexo
 Hexo 是一个基于 Node.js 高效的web服务器框架，可以快速生成静态网页。
