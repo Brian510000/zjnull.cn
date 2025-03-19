@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>图墙页面</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            /* 所有元素使用 border-box 盒模型 */
+            padding: 0;
+            /* 移除所有元素的内边距 */
+            margin: 0;
+            /* 移除所有元素的外边距 */
+        }
+    
+        body {
+            min-block-size: 100%;
+            /* body 的最小高度为 100% */
+            display: grid;
+            /* 网格布局 */
+            place-content: center;
+            /* 内容居中 */
+            padding-block: 30dvh;
+            /* 上下内边距为 30dvh */
+            background: #f7d6ff;
+            /* 背景颜色 */
+        }
+
+        @keyframes slide-fade-in {
+            from {
+                opacity: 0; /* 设置初始透明度为 0（完全透明） */
+                box-shadow: none; /* 初始状态没有阴影 */
+                transform: scale(.2) translateY(15vh); /* 初始状态：缩放为 80%，向下移动 15vh */
+            }
+        }
+
+        .cards {
+            display: grid; /* 网格布局 */
+            gap: 2rem; /* 网格项之间的间距为 2rem */
+            grid-auto-flow: dense; /* 密集排列 */
+            grid-template-columns: repeat(5, 30ch); /* 4 列，每列宽度平均分配 */
+        }
+
+        .card {
+            animation: slide-fade-in both; /* 应用 slide-fade-in 动画，填充模式为 both */
+            animation-timeline: view(); /* 使用视图时间线 */
+            animation-range: contain 0% contain 100%; /* 设置动画时间范围 */
+            border-radius: 10px; /* 设置边框圆角为 10px */
+            line-height: 6; /* 设置行高为 6（相对于字体大小） */
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2); /* 设置阴影效果 */
+            font-size: 32px; /* 设置字体大小 */
+            letter-spacing: 5px; /* 设置字符间距 */
+            color: #FFF; /* 设置文字颜色 */
+            width: 100%; /* 设置宽度 */
+            height: 100%; /* 设置高度 */
+            overflow: hidden; /* 隐藏超出内容 */
+            background-image: linear-gradient(to bottom right, #a1c4fd, #c2e9fb, #d1cfe2, #e0b3d7, #f0b3d5, #f9bccc); /* 设置渐变色 */
+            display: flex; /* 弹性盒子布局 */
+            justify-content: center; /* 水平居中 */
+            align-items: center; /* 垂直居中 */
+        }
+
+        .card img {
+            width: 100%; /* 图片宽度占满父元素 */
+            height: 100%; /* 图片高度占满父元素 */
+        }
+
+        .card:nth-of-type(4n) {
+            grid-column: span 2; /* 每第 4 个卡片跨越 2 列 */
+        }
+
+        .card:nth-of-type(5n) {
+            grid-column: span 2; /* 每第 5 个卡片跨越 2 列 */
+        }
+
+        .card:nth-of-type(7n) {
+            grid-row: span 2; /* 每第 7 个卡片跨越 2 行 */
+        } 
+
+        /* 基础按钮样式 */
+        .btn {
+            width: 5%;
+                /* 宽度占满父容器 */
+            padding: 12px 20px;
+            /* 内边距 */
+            border: none;
+            /* 去除边框 */
+            border-radius: 30px;
+            /* 圆角 */
+            padding: 12px 30px;
+                    
+            font-size: 16px;
+            /* 字体大小 */
+            font-weight: bold;
+            /* 字体加粗 */
+            text-align: center;
+            /* 文字居中 */
+            color: #fff;
+            /* 文字颜色 */
+            background: linear-gradient(135deg, #5cbe5f, #45a049);
+            /* 渐变绿色背景 */
+            cursor: pointer;
+            /* 鼠标指针变成点击手型 */
+            transition: all 0.3s ease;
+            /* 过渡效果 */
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            /* 阴影效果 */
+        }
+        /* 悬停效果 */
+        .btn:hover {
+            background: linear-gradient(135deg, #45a049, #388e3c);
+            /* 悬停时深绿色渐变 */
+            transform: scale(1.2);
+            /* 按钮放大 */
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+            /* 阴影加深 */
+        }
+        /* 点击效果 */
+        .btn:active {
+            transform: scale(0.98);
+            /* 点击时稍微缩小 */
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            /* 还原阴影 */
+        }
+        /* 禁用状态 */
+        .btn:disabled {
+            background-color: #ccc;
+            /* 灰色背景 */
+            cursor: not-allowed;
+            /* 禁用时鼠标指针变成不可点击样式 */
+            box-shadow: none;
+            /* 取消阴影 */
+        }
+        /* 按钮文本 */
+        .btn span {
+            font-size: 18px;
+        }
+    </style>
+</head>
+<body>
+    <a class="btn"
+        style="display: block; width: 10%; margin: 0 auto; background: linear-gradient(to bottom left, #a1c4fd, #c2e9fb, #d1cfe2, #e0b3d7, #f0b3d5, #f9bccc);"
+        href="https://www.zjnull.cn" target="_blank">访问主页</a>
+
+    <div class="cards">
+        <div class="card">QQQQQQ</div>
+        <div class="card">QQQQQQ</div>
+        <div class="card">QQQQQQ</div>
+        <div class="card">QQQQQQ</div>
+        <div class="card"><img src="4.png"></div>
+        <div class="card">QQQQQQ</div>
+        <div class="card">QQQQQQ</div>
+        <div class="card">QQQQQQ</div>
+        <div class="card">QQQQQQ</div>
+        <div class="card"><img src="4.png"></div>
+        <div class="card">QQQQQQ</div>
+        <div class="card">QQQQQQ</div>
+        <div class="card">QQQQQQ</div>
+        <div class="card">QQQQQQ</div>
+        <div class="card"><img src="4.png"></div>
+        <div class="card">QQQQQQ</div>
+        <div class="card">QQQQQQ</div>
+        <div class="card">QQQQQQ</div>
+        <div class="card">QQQQQQ</div>
+        <div class="card"><img src="4.png"></div>
+        <div class="card">QQQQQQ</div>
+        <div class="card">QQQQQQ</div>
+        <div class="card">QQQQQQ</div>
+        <div class="card">QQQQQQ</div>
+        <div class="card"><img src="4.png"></div>
+    </div>
+</body>
+</html>

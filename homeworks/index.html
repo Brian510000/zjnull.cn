@@ -12,22 +12,21 @@
     <h1>这是一个未渲染的HTML页面</h1>
     <h2>这是一个未渲染的HTML页面</h2>
     <h3>这是一个未渲染的HTML页面</h3>
-    <!-- <h4>这是一个未渲染的HTML页面</h4>
-    <h5>这是一个未渲染的HTML页面</h5>
-    <h6>这是一个未渲染的HTML页面</h6> -->
-    <!-- 段落 -->
+
     <p>这是一个示例网页，展示HTML中的一些常用标签。</p>
-    <p>HTML（超文本标记语言）用于创建网页内容。</p>
 
-    <!-- 链接 -->
-    <a href="https://www.zjnull.cn" target="_blank">访问主页</a>
-
-    <a class="btn" style="width: 20%;" href="https://ghfast.top/https://raw.githubusercontent.com/Brian510000/zjnull.cn/refs/heads/main/homeworks/style.css" target="_blank">
-        下载本页面style样式
+    <a class="btn" style="width: 10%;background: linear-gradient(to bottom right, #a1c4fd, #c2e9fb, #d1cfe2, #e0b3d7, #f0b3d5, #f9bccc);" href="https://www.zjnull.cn" target="_blank">访问主页</a>
+    <p></p>
+    <a class="btn" style="width: 20%;" href="https://zjnull.cn/ds-r1/" target="_blank">
+        访问本站R1大模型
     </a>
-
-    <!-- 图片 -->
+    <!-- https://ghfast.top/https://raw.githubusercontent.com/Brian510000/zjnull.cn/refs/heads/main/homeworks/style.css -->
+    <p></p>
+    <div></div>
     <img src="https://ghfast.top/https://raw.githubusercontent.com/Brian510000/pic_bed/main/web-site/20250301054549028.png" alt="示例图片" />
+    <p></p>
+
+    <a class="btn" href="pic.html" style="width: 10%;" target="_blank">跳转图墙</a>
 
     <!-- 列表 -->
     <h4>这是一组无序列表</h4>
@@ -44,21 +43,7 @@
         <li>第三步：学习JavaScript</li>
     </ol>
 
-    <!-- 表格 -->
-    <table border="1">
-        <tr>
-            <th>姓名</th>
-            <th>年龄</th>
-        </tr>
-        <tr>
-            <td>张三</td>
-            <td>25</td>
-        </tr>
-        <tr>
-            <td>李四</td>
-            <td>30</td>
-        </tr>
-    </table>
+
 
     <table class="styled-table">
                 <tr>
@@ -101,17 +86,56 @@
 
 
 <style>
-    /* * {
+    @keyframes slide-fade-in {
+        from {
+            opacity: 0; /* 设置初始透明度为 0（完全透明） */
+            box-shadow: none; /* 初始状态没有阴影 */
+            transform: scale(.8) translateY(15vh); /* 初始状态：缩放为 80%，向下移动 15vh */
+        }
+    }
 
-        margin: 0;
+    .cards {
+        display: grid; /* 网格布局 */
+        gap: 2rem; /* 网格项之间的间距为 2rem */
+        grid-auto-flow: dense; /* 密集排列 */
+        grid-template-columns: repeat(5, 30ch); /* 4 列，每列宽度平均分配 */
+    }
 
-        padding: 0;
+    .card {
+        animation: slide-fade-in both; /* 应用 slide-fade-in 动画，填充模式为 both */
+        animation-timeline: view(); /* 使用视图时间线 */
+        animation-range: contain 0% contain 100%; /* 设置动画时间范围 */
+        border-radius: 10px; /* 设置边框圆角为 10px */
+        line-height: 6; /* 设置行高为 1.6（相对于字体大小） */
+        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2); /* 设置阴影效果 */
+        font-size: 32px; /* 设置字体大小 */
+        letter-spacing: 5px; /* 设置字符间距 */
+        color: #FFF; /* 设置文字颜色 */
+        width: 100%; /* 设置宽度 */
+        height: 100%; /* 设置高度 */
+        overflow: hidden; /* 隐藏超出内容 */
+        background-image: linear-gradient(to bottom right, #a1c4fd, #c2e9fb, #d1cfe2, #e0b3d7, #f0b3d5, #f9bccc); /* 设置渐变色 */
+        display: flex; /* 弹性盒子布局 */
+        justify-content: center; /* 水平居中 */
+        align-items: center; /* 垂直居中 */
+    }
 
-        box-sizing: border-box;
+    .card img {
+        width: 100%; /* 图片宽度占满父元素 */
+        height: 100%; /* 图片高度占满父元素 */
+    }
 
-        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    .card:nth-of-type(4n) {
+        grid-column: span 2; /* 每第 4 个卡片跨越 2 列 */
+    }
 
-    } */
+    .card:nth-of-type(5n) {
+        grid-column: span 2; /* 每第 5 个卡片跨越 2 列 */
+    }
+
+    .card:nth-of-type(7n) {
+        grid-row: span 2; /* 每第 7 个卡片跨越 2 行 */
+    }
 
     body {
 
@@ -556,5 +580,32 @@
 
 </body>
 
+
+<body>
+    <div class="cards">
+        <div class="card">QQQQQQ</div>
+        <div class="card">QQQQQQ</div>
+        <div class="card">QQQQQQ</div>
+        <div class="card">QQQQQQ</div>
+        <div class="card">QQQQQQ</div>
+        <div class="card"><img src="4.png"></div>
+    </div>
+    <div class="cards">
+        <div class="card">QQQQQQ</div>
+        <div class="card">QQQQQQ</div>
+        <div class="card">QQQQQQ</div>
+        <div class="card">QQQQQQ</div>
+        <div class="card">QQQQQQ</div>
+        <div class="card"><img src="4.png"></div>
+    </div>
+    <div class="cards">
+        <div class="card">QQQQQQ</div>
+        <div class="card">QQQQQQ</div>
+        <div class="card">QQQQQQ</div>
+        <div class="card">QQQQQQ</div>
+        <div class="card">QQQQQQ</div>
+        <div class="card"><img src="4.png"></div>
+    </div>
+</body>
 
 </html>
