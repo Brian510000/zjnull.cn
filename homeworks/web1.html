@@ -11,7 +11,58 @@
             background-image: url('https://ghfast.top/https://raw.githubusercontent.com/Brian510000/pic_bed/main/web-site/wallhaven-e7gvpo.png');
             background-size: cover; /* 让背景图片铺满整个页面 */
             background-repeat: no-repeat; /* 防止背景重复 */
+            display:flex;
+            justify-content:center;
+            align-items:center;
         }
+        #nav {
+            position: relative;
+            border: none;
+            border-radius: 10em;
+            display: flex;
+            list-style: none;
+            background: #f5f5f5;
+            box-shadow: 20px 40px 40px rgba(0, 0, 0, 0.2); /* 修正阴影 */
+            padding: 10px;
+        }
+
+        #nav li a {
+            position: relative;
+            padding: 15px 50px;
+            font: 500 24px 'YouSheBiaoTiHei', sans-serif; /* 修正字体格式 */
+            border: none;
+            outline: none;
+            color: rgb(70, 100, 180); /* 修正颜色 */
+            display: inline-block;
+            text-decoration: none;
+            z-index: 3;
+        }
+
+        .slide1,
+        .slide2 {
+            position: absolute;
+            display: inline-block;
+            height: 60px;
+            border-radius: 10em;
+            transition: all 0.6s cubic-bezier(0.23, 1, 0.32, 1.05);
+        }
+
+        .slide1 {
+            background-color: rgb(170, 190, 255);
+            z-index: 2;
+        }
+
+        .slide2 {
+            opacity: 0;
+            background-color: rgba(170, 190, 255, 0.5);
+            z-index: 1;
+            box-shadow: 0 0 20px #ffffffaa inset; /* 修正阴影格式 */
+        }
+
+        .squeeze {
+            transform: scale(0.9);
+        }
+
     </style>
 </head>
 
@@ -105,7 +156,38 @@
     <a class="btn"
         style="display: block; width: 10%; margin: 0 auto;background: linear-gradient(to bottom right, #a1c4fd, #c2e9fb, #d1cfe2, #e0b3d7, #f0b3d5, #f9bccc);"
         href="https://www.zjnull.cn" target="_blank">访问主页</a>
-    
+    <p></p>
+    <ul id="nav">
+        <li class="slide1"></li>
+        <li class="slide2"></li>
+        <li><a href="index.html">作业</a></li>
+        <li><a href="index.html">index</a></li>
+        <li><a href="https://www.zjnull.cn">主页</a></li> <!-- 修正错误 -->
+        <li><a href="https://zjnull.cn/homeworks/pic">图床</a></li>
+        <li><a href="https://zjnull.cn/ds-r1/">Deepseek-R1</a></li>
+    </ul>
 </body>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script>
+            $("#nav a").on("click", function () {
+                var position = $(this).parent().position();
+                var width = $(this).parent().width();
+                $("#nav .slide1").css({ opacity: 1, left: position.left, width: width });
+            });
 
+            $("#nav a").on("mouseover", function () {
+                var position = $(this).parent().position();
+                var width = $(this).parent().width();
+                $("#nav .slide2").css({ opacity: 1, left: position.left, width: width }).addClass("squeeze");
+            });
+
+            $("#nav a").on("mouseout", function () {
+                $("#nav .slide2").css({ opacity: 0 }).removeClass("squeeze");
+            });
+
+            var currentWidth = $("#nav li:nth-of-type(3) a").parent("li").width();
+            var current = $("#nav li:nth-of-type(3) a").position();
+            $("#nav .slide1").css({ left: +current.left, width: currentWidth });
+        
+</script>
 </html>
