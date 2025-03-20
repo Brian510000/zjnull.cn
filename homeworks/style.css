@@ -297,13 +297,38 @@ th {
 }
 /* 表头样式 */
 .styled-table thead tr {
-    background: linear-gradient(135deg, #007BFF, #0056b3);
+    background: transparent;
+        /* 让表格透明 */
     /* 渐变背景 */
     color: #bac2ff;
     /* 柔和的浅米色字体 */
     font-weight: bold;
     text-transform: uppercase;
     /* 让表头字母大写，更有层次 */
+}
+
+/* 确保表格标题居中 */
+.styled-table thead th[colspan] {
+    text-align: center;
+    font-size: 30px;
+    padding: 40px 0;
+    background: rgba(0, 86, 179, 0.01);
+    /* 让表头半透明 */
+    color: #fff;
+    border-radius: 10px;
+    backdrop-filter: blur(5px);
+    /* 让背景有模糊效果 */
+}
+.styled-table thead th {
+    text-align: center;
+    font-size: 30px;
+    padding: 40px 0;
+    background: rgba(0, 86, 179, 0.4);
+    /* 让表头半透明 */
+    color: #fff;
+    border-radius: 10px;
+    backdrop-filter: blur(5px);
+    /* 让背景有模糊效果 */
 }
 /* 表头单元格 */
 .styled-table th {
@@ -339,11 +364,7 @@ th {
     color: #333;
     /* 深灰色，减少纯黑的视觉刺激 */
 }
-/* 表头增加渐变效果，让层次更丰富 */
-.styled-table thead {
-    background: linear-gradient(135deg, #007BFF, #0056b3);
-    color: #F5E6CC;
-}
+
 
 /* 🌟 现代化圆角输入框 */
 .input-box {
