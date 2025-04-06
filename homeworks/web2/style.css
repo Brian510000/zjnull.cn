@@ -1,0 +1,92 @@
+
+#div1{
+    background-image: url("images\\bg_header.jpg");
+    width: 778px;
+    height: 143px;
+}
+
+#div2{
+    background-image: url("images\\bg_menu.jpg");
+    height: 27px;
+    width: 778px;
+    text-align: right;
+}
+
+#text1{
+    text-align: right;
+    color: rgb(23, 11, 192);
+    padding-right: 50px;
+}
+
+#div3{
+    background-image: url("images\\bg_left_top.jpg");
+    width: 190px;
+    height: 200px;
+    float: left;
+    clear :left;
+}
+
+#form1{
+    position: relative;
+    padding-top: 30%;
+    padding-left: 10%;
+}
+
+#text2{
+    color: rgb(59, 72, 255);
+    position: relative;
+    padding-left: 20%;
+}
+
+#div4{
+    background-color: rgb(228, 228, 228);
+    width: 190px;
+    height: 218px;
+    float: left;
+    clear :left;
+}
+
+#img1{
+    position: relative;
+    left: 5%;
+    top: 5%;
+}
+#ul1{
+    position: relative;
+    top: 10%;
+    list-style-image: url("images\\list_item.gif");
+}
+li{
+    margin-bottom: 1px;
+    padding: 3px;
+}
+
+#div5{
+    float: right;
+    width: 588px;
+    height: 418px;
+    clear :right;
+}
+
+#div6{
+    float: left;
+    height: 53px;
+    clear: right;
+    width: 511px;
+}
+
+#div7{
+    background-color: rgb(255, 255, 255);
+    margin: 0;
+    padding: 0;
+    width: 588px;
+    height: 418px;
+}
+
+#div8{
+    background-image: url("images\\bg_footer.gif");
+    width: 778px;
+    height: 27px;
+    float :left;
+    clear :left;
+}

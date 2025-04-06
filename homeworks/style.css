@@ -72,29 +72,6 @@ a:hover {
     /* 鼠标悬停时，链接颜色变深 */
 }
 
-/* 按钮样式 */
-button {
-    background-color: #007BFF;
-    /* 按钮背景色为蓝色 */
-    color: white;
-    /* 按钮文字为白色 */
-    font-size: 16px;
-    /* 字体大小适中 */
-    padding: 10px 20px;
-    /* 上下左右的内边距，确保按钮大方 */
-    border: none;
-    /* 去掉默认的边框 */
-    border-radius: 5px;
-    /* 圆角按钮 */
-    cursor: pointer;
-    /* 鼠标悬停时显示为指针 */
-    transition: background-color 0.3s ease;
-    /* 平滑的背景色过渡效果 */
-}
-button:hover {
-    background-color: #0056b3;
-    /* 鼠标悬停时按钮颜色变深 */
-}
 
 /* 卡片样式 */
 .card {
@@ -224,8 +201,8 @@ th {
 
 /* 基础按钮样式 */
 .btn {
-    width: 5%;
-        /* 宽度占满父容器 */
+    display: inline-block; /* 关键！让宽度和高度生效 */
+    
     padding: 12px 20px;
     /* 内边距 */
     border: none;
