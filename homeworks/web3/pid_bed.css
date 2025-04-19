@@ -1,0 +1,141 @@
+body {
+    background: #f7d6ff;
+}
+
+@keyframes slide-fade-in {
+    from {
+        opacity: 0.1;
+        transform: scale(0.9) translateY(1vh);
+    }
+}
+
+.cards {
+    display: grid;
+    gap: 2rem;
+    grid-auto-flow: dense;
+    grid-template-columns: repeat(5, 30ch);
+    /* 5 列，每列宽度平均分配 */
+}
+
+.card {
+    animation: slide-fade-in both;
+    animation-timeline: view();
+    animation-range: contain 0% contain 100%;
+    border-radius: 10px;
+    line-height: 6;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+    font-size: 32px;
+    letter-spacing: 5px;
+    color: #FFF;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    background-image: linear-gradient(to bottom right, #a1c4fd, #c2e9fb, #d1cfe2, #e0b3d7, #f0b3d5, #f9bccc);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.card:hover {
+    transform: scale(1.05) translateY(0);
+}
+
+.card img {
+    width: 100%;
+    height: 100%;
+}
+
+.card:nth-of-type(4n) {
+    grid-column: span 2;
+}
+
+.card:nth-of-type(5n) {
+    grid-column: span 2;
+}
+
+.card:nth-of-type(7n) {
+    grid-row: span 2;
+}
+
+.btn {
+    display: inline-block;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 30px;
+    padding: 12px 30px;
+    font-size: 16px;
+    font-weight: bold;
+    text-align: center;
+    color: #fff;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.btn:hover {
+    transform: scale(1.5);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+.btn:active {
+    transform: scale(0.98);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.btn span {
+    font-size: 18px;
+}
+
+
+.card ul {
+    display: block;
+    position: absolute;
+    top: 0px;
+    right: 10px;
+    padding: 12px 16px;
+    background: rgba(255, 255, 255, 0.95);
+    border-radius: 10px;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+    list-style: none;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 14px;
+    color: #333;
+    z-index: 10;
+    width: calc(50% - 20px);
+    transform: translateY(100px);
+    opacity: 0;
+    visibility: hidden;
+    transition: transform 0.3s ease, opacity 0.3s ease, visibility 0.3s ease;
+}
+
+/* hover 显示信息框，向上弹出 + 淡入 */
+.card:hover ul {
+    transform: translateY(0);
+    opacity: 1;
+    visibility: visible;
+}
+
+.card li {
+    line-height: 1.6em;
+    margin: 4px 0;
+}
+
+.card li.title {
+    font-weight: bold;
+    font-size: 16px;
+    color: #2c3e50;
+    border-bottom: 1px solid #a7d5ff;
+    padding-bottom: 5px;
+    margin-bottom: 6px;
+}
+
+.card li.catno {
+    color: #3498db;
+    font-weight: 500;
+}
+
+.card li.price {
+    color: #e74c3c;
+    font-style: italic;
+    font-weight: bold;
+}
